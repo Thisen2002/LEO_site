@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom"; // If using React Router
 import "./Notfound.css";
 
-function NotFound() {
+function Notfound() {
   const navigate = useNavigate(); // Remove this line if not using React Router
 
   const handleGoHome = () => {
@@ -57,4 +57,4 @@ function NotFound() {
   );
 }
 
-export default NotFound;
+export default Notfound;
