@@ -76,6 +76,16 @@
   width: 100%;
 }
 
+.nav-link.active {
+  color: #1e3c72;
+  font-weight: 600;
+}
+
+.nav-link.active::after {
+  width: 100%;
+  background: #1e3c72;
+}
+
 .nav-cta-button {
   background: #1e3c72;
   color: white;
@@ -149,6 +159,11 @@
 
   .nav-link:hover {
     background-color: #f8f9fa;
+  }
+
+  .nav-link.active {
+    background-color: #1e3c72;
+    color: white;
   }
 
   .nav-link::after {
