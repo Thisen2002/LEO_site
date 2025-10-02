@@ -1,0 +1,38 @@
+[
+  {
+    "id": 5,
+    "name": "Mihiri Jayawardena",
+    "position": "Project Director",
+    "department": "Engineering Faculty",
+    "year": "2nd Year",
+    "image": "/team-projects.jpg",
+    "bio": "Coordinating impactful community service projects and initiatives."
+  },
+  {
+    "id": 6,
+    "name": "Kasun Rathnayake",
+    "position": "Events Director",
+    "department": "Science Faculty",
+    "year": "3rd Year",
+    "image": "/team-events.jpg",
+    "bio": "Creating memorable experiences and organizing successful events."
+  },
+  {
+    "id": 7,
+    "name": "Amara Bandara",
+    "position": "Public Relations Director",
+    "department": "Arts Faculty",
+    "year": "2nd Year",
+    "image": "/team-pr.jpg",
+    "bio": "Building relationships and managing our public image and communications."
+  },
+  {
+    "id": 8,
+    "name": "Nadeesha Kumari",
+    "position": "Membership Director",
+    "department": "Medicine Faculty",
+    "year": "1st Year",
+    "image": "/team-membership.jpg",
+    "bio": "Welcoming new members and fostering a strong Leo community."
+  }
+]

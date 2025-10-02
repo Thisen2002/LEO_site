@@ -1,0 +1,46 @@
+[
+  {
+    "id": 1,
+    "name": "Sahan Perera",
+    "position": "President",
+    "department": "Engineering Faculty",
+    "year": "3rd Year",
+    "image": "/team-president.jpg",
+    "bio": "Leading the Leo Society with passion for community service and youth development.",
+    "email": "president@leosocietyuop.org",
+    "linkedin": "https://linkedin.com/in/sahanperera"
+  },
+  {
+    "id": 2,
+    "name": "Kavya Fernando",
+    "position": "Vice President",
+    "department": "Medicine Faculty",
+    "year": "2nd Year",
+    "image": "/team-vp.jpg",
+    "bio": "Dedicated to supporting community health initiatives and member development.",
+    "email": "vp@leosocietyuop.org",
+    "linkedin": "https://linkedin.com/in/kavyafernando"
+  },
+  {
+    "id": 3,
+    "name": "Ravindu Silva",
+    "position": "Secretary",
+    "department": "Science Faculty",
+    "year": "3rd Year",
+    "image": "/team-secretary.jpg",
+    "bio": "Ensuring smooth operations and maintaining excellent communication channels.",
+    "email": "secretary@leosocietyuop.org",
+    "linkedin": "https://linkedin.com/in/ravindusilva"
+  },
+  {
+    "id": 4,
+    "name": "Tharushi Wijesinghe",
+    "position": "Treasurer",
+    "department": "Arts Faculty",
+    "year": "2nd Year",
+    "image": "/team-treasurer.jpg",
+    "bio": "Managing finances with transparency and supporting sustainable growth.",
+    "email": "treasurer@leosocietyuop.org",
+    "linkedin": "https://linkedin.com/in/tharushiwijesinghe"
+  }
+]
