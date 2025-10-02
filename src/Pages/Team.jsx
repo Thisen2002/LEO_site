@@ -54,7 +54,7 @@ function Team() {
           </div>
         </section>
 
-        {/* Department Heads */}
+        {/* Department Heads
         <section className="department-section">
           <div className="container">
             <div className="section-header">
@@ -77,10 +77,10 @@ function Team() {
               ))}
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Join Team CTA */}
-        <section className="join-team-section">
+        {/* <section className="join-team-section">
           <div className="container">
             <div className="join-team-content">
               <h2>Want to Join Our Team?</h2>
@@ -94,7 +94,7 @@ function Team() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
       </main>
     </div>
   )

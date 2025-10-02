@@ -52,7 +52,7 @@ function Projects() {
           </div>
         </section>
 
-        <section className="get-involved-section">
+        {/* <section className="get-involved-section">
           <div className="container">
             <div className="get-involved-content">
               <h2>Want to Get Involved?</h2>
@@ -66,7 +66,7 @@ function Projects() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
       </main>
     </div>
   )

@@ -2,9 +2,6 @@ import React, { useEffect, useState } from 'react'
 import './Contact.css'
 
 function Contact() {
-  useEffect(() => {
-    document.title = 'Contact | Leo Society UOP'
-  }, [])
 
   const [formData, setFormData] = useState({
     name: '',
