@@ -37,7 +37,7 @@ function Navbar() {
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="nav-container">
         <div className="nav-brand">
-          <img src="/leo-logo.png" alt="Leo Logo" className="nav-logo" />
+          <img src="../public/leo-logo-black-and-white.png" alt="Leo Logo" className="nav-logo" />
           <span className="nav-title">Leo Society UOP</span>
         </div>
         

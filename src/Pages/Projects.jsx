@@ -1,8 +1,10 @@
-import React, { useEffect } from 'react'
+import React, { useState } from 'react'
 import './Projects.css'
 import projects from '../json files/Projects.json'
 
 function Projects() {
+  const [statusFilter, setStatusFilter] = useState('All')
+  
   const getStatusBadgeClass = (status) => {
     switch (status) {
       case 'Completed': return 'status-completed'
@@ -10,6 +12,18 @@ function Projects() {
       case 'Upcoming': return 'status-upcoming'
       default: return 'status-default'
     }
+  }
+
+  // Get unique status values and add 'All' option
+  const statusOptions = ['All', ...new Set(projects.map(project => project.status))]
+
+  // Filter projects based on selected status
+  const filteredProjects = statusFilter === 'All' 
+    ? projects 
+    : projects.filter(project => project.status === statusFilter)
+
+  const handleStatusFilter = (status) => {
+    setStatusFilter(status)
   }
 
   return (
@@ -27,9 +41,26 @@ function Projects() {
 
       <main>
         <section className="projects-grid-section">
+
+          <div className="container">
+            <div className="filter-controls">
+              <div className="filter-buttons">
+                {statusOptions.map(status => (
+                  <button
+                    key={status}
+                    className={`filter-btn ${statusFilter === status ? 'active' : ''}`}
+                    onClick={() => handleStatusFilter(status)}
+                  >
+                    {status}
+                  </button>
+                ))}
+              </div>
+            </div>
+          </div>
+
           <div className="container">
             <div className="projects-grid">
-              {projects.map(project => (
+              {filteredProjects.map(project => (
                 <div key={project.id} className="project-card">
                   <div className="project-image">
                     <img src={project.image} alt={project.title} />

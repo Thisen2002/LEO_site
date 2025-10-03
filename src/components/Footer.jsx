@@ -11,7 +11,7 @@ function Footer() {
         <div className="footer-top">
           <div className="footer-brand">
             <Link to="/" className="brand-link">
-              <img src="/leo-logo.png" alt="Leo" className="footer-logo" />
+              <img src="../public/leo-logo-black-and-white.png" alt="Leo" className="footer-logo" />
               <span className="brand-text">Leo Society UOP</span>
             </Link>
             <p className="brand-tagline">Empowering young leaders through service</p>

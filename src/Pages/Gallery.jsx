@@ -94,7 +94,7 @@ function Gallery() {
           </div>
         </section>
 
-        {/* Photo Submission CTA */}
+        {/* Photo Submission CTA
         <section className="photo-submission-section">
           <div className="container">
             <div className="submission-content">
@@ -106,7 +106,7 @@ function Gallery() {
               <button className="submit-photos-btn">Submit Photos</button>
             </div>
           </div>
-        </section>
+        </section> */}
       </main>
 
       {/* Lightbox Modal */}

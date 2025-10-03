@@ -28,17 +28,14 @@ function Contact() {
     {
       title: 'Email',
       details: 'contact@leosocietyuop.org',
-      description: 'We\'ll respond within 24 hours'
     },
     {
       title: 'Phone',
       details: '+94 81 238 9999',
-      description: 'Monday - Friday, 9:00 AM - 5:00 PM'
     },
     {
       title: 'Address',
       details: 'University of Peradeniya',
-      description: 'Student Center Building, Peradeniya 20400'
     }
   ]
 
@@ -134,7 +131,6 @@ function Contact() {
                   <div key={index} className="contact-info-item">
                     <h3>{info.title}</h3>
                     <p className="contact-detail">{info.details}</p>
-                    <p className="contact-description">{info.description}</p>
                   </div>
                 ))}
               </div>
