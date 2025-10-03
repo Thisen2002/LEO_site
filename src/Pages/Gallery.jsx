@@ -3,10 +3,6 @@ import './Gallery.css'
 import galleryItems from '../json files/gallery.json'
 
 function Gallery() {
-  useEffect(() => {
-    document.title = 'Gallery | Leo Society UOP'
-  }, [])
-
   const [activeCategory, setActiveCategory] = useState('all')
   const [selectedImage, setSelectedImage] = useState(null)
 
