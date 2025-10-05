@@ -5,7 +5,7 @@
       {
         "name": "Lihini Sahanya",
         "position": "Director",
-        "image": "/team-lihini-sahanya.jpg",
+        "image": "../src/Pic/BoD/Lihini.jpg",
         "email": "lihini.sahanya@leo.org",
         "linkedin": "https://linkedin.com/in/lihinisahanya"
       }
@@ -17,14 +17,14 @@
       {
         "name": "Dananga Oshadhi",
         "position": "Co-Director",
-        "image": "/team-dananga-oshadhi.jpg",
+        "image": "../src/Pic/BoD/Dananga.jpg",
         "email": "dananga.oshadhi@leo.org",
         "linkedin": "https://linkedin.com/in/danangaoshadhi"
       },
       {
         "name": "Rashini Shenaya",
         "position": "Co-Director",
-        "image": "/team-rashini-shenaya.jpg",
+        "image": "../src/Pic/BoD/Rashini.jpg",
         "email": "rashini.shenaya@leo.org",
         "linkedin": "https://linkedin.com/in/rashinishenaya"
       }
@@ -36,13 +36,13 @@
       {
         "name": "Melani Chandrathilake",
         "position": "Co-Director",
-        "image": "/team-melani-chandrathilake.jpg",
+        "image": "../src/Pic/BoD/Melani.jpg",
         "linkedin": "https://linkedin.com/in/melanichandrathilake"
       },
       {
         "name": "Nadeesha Munaweera",
         "position": "Co-Director",
-        "image": "/team-nadeesha-munaweera.jpg",
+        "image": "../src/Pic/BoD/Nadeesha.jpg",
         "linkedin": "https://linkedin.com/in/nadeeshamunaweera"
       }
     ]
@@ -53,7 +53,7 @@
       {
         "name": "Hansika Dilushini",
         "position": "Director",
-        "image": "/team-hansika-dilushini.jpg",
+        "image": "../src/Pic/BoD/Hansika.jpg",
         "linkedin": "https://linkedin.com/in/hansikadilushini"
       }
     ]
@@ -64,7 +64,7 @@
       {
         "name": "Jayani Chandrapala",
         "position": "Director",
-        "image": "/team-jayani-chandrapala.jpg",
+        "image": "../src/Pic/BoD/Jayani.jpg",
         "linkedin": "https://linkedin.com/in/jayanichandrapala"
       }
     ]
@@ -75,7 +75,7 @@
       {
         "name": "Madini Ariyarathne",
         "position": "Director",
-        "image": "/team-madini-ariyarathne.jpg",
+        "image": "../src/Pic/BoD/Madini.jpg",
         "linkedin": "https://linkedin.com/in/madiniariyarathne"
       }
     ]
@@ -86,7 +86,7 @@
       {
         "name": "Vihansa Niduwari",
         "position": "Director",
-        "image": "/team-vihansa-niduwari.jpg",
+        "image": "../src/Pic/BoD/Vihansa.jpg",
         "linkedin": "https://linkedin.com/in/vihansaniduwari"
       }
     ]
@@ -97,13 +97,13 @@
       {
         "name": "Chamodha Nethmini",
         "position": "Co-Director",
-        "image": "/team-chamodha-nethmini.jpg",
+        "image": "../src/Pic/BoD/Chamodha.jpg",
         "linkedin": "https://linkedin.com/in/chamodhanethmini"
       },
       {
         "name": "Kavindi Madushani",
         "position": "Co-Director",
-        "image": "/team-kavindi-madushani.jpg",
+        "image": "../src/Pic/BoD/Kavindi.jpg",
         "linkedin": "https://linkedin.com/in/kavindimadushani"
       }
     ]
@@ -114,7 +114,7 @@
       {
         "name": "Poorni Dedigamuwa",
         "position": "Director",
-        "image": "/team-poorni-dedigamuwa.jpg",
+        "image": "../src/Pic/BoD/Poorni.jpg",
         "linkedin": "https://linkedin.com/in/poornidedigamuwa"
       }
     ]
@@ -125,7 +125,7 @@
       {
         "name": "Sumith Prasanna",
         "position": "Director",
-        "image": "/team-sumith-prasanna.jpg",
+        "image": "../src/Pic/BoD/Sumith.jpg",
         "linkedin": "https://linkedin.com/in/sumithprasanna"
       }
     ]
@@ -136,7 +136,7 @@
       {
         "name": "Dileep Sathsara",
         "position": "Director",
-        "image": "/team-dileep-sathsara.jpg",
+        "image": "../src/Pic/BoD/Dileep.jpg",
         "linkedin": "https://linkedin.com/in/dileepsathsara"
       }
     ]
@@ -147,13 +147,13 @@
       {
         "name": "Sahiru Siriwardhana",
         "position": "Chief Activity Coordinator",
-        "image": "/team-sahiru-siriwardhana.jpg",
+        "image": "../src/Pic/BoD/Sahiru.jpg",
         "linkedin": "https://linkedin.com/in/sahirusiriwardhana"
       },
       {
         "name": "Rasinindu Hemathilake",
         "position": "Chief Activity Coordinator",
-        "image": "/team-rasinindu-hemathilake.jpg",
+        "image": "../src/Pic/BoD/Rasinindu.jpg",
         "linkedin": "https://linkedin.com/in/rasininduhemathilake"
       }
     ]
@@ -164,13 +164,13 @@
       {
         "name": "Afra Mulafar",
         "position": "Chief Editor",
-        "image": "/team-afra-mulafar.jpg",
+        "image": "../src/Pic/BoD/Afra.jpg",
         "linkedin": "https://linkedin.com/in/aframulafar"
       },
       {
         "name": "Charuni Bandara",
         "position": "Sub Editor",
-        "image": "/team-charuni-bandara.jpg",
+        "image": "../src/Pic/BoD/Charuni.jpg",
         "linkedin": "https://linkedin.com/in/charunibandara"
       }
     ]
@@ -181,25 +181,25 @@
       {
         "name": "Pabasara Wijayathilaka",
         "position": "Chief Media & Relations Officer (Digital)",
-        "image": "/team-pabasara-wijayathilaka.jpg",
+        "image": "../src/Pic/BoD/Pabasara.jpg",
         "linkedin": "https://linkedin.com/in/pabasarawijayathilaka"
       },
       {
         "name": "Mihiri Rambukwella",
         "position": "Chief Media & Relations Officer (Digital)",
-        "image": "/team-mihiri-rambukwella.jpg",
+        "image": "../src/Pic/BoD/Mihiri.jpg",
         "linkedin": "https://linkedin.com/in/mihirirambukwella"
       },
       {
         "name": "Buddhi Kaushan",
         "position": "Chief Media & Relations Officer (PR)",
-        "image": "/team-buddhi-kaushan.jpg",
+        "image": "../src/Pic/BoD/Buddhi.jpg",
         "linkedin": "https://linkedin.com/in/buddhikaushan"
       },
       {
         "name": "Heshan Godellawaththa",
         "position": "Chief Media & Relations Officer (PR)",
-        "image": "/team-heshan-godellawaththa.jpg",
+        "image": "../src/Pic/BoD/Heshan.jpg",
         "linkedin": "https://linkedin.com/in/heshangodellawaththa"
       }
     ]
@@ -210,13 +210,13 @@
       {
         "name": "Ruwini Thilakshika",
         "position": "Chief Membership Coordinator",
-        "image": "/team-ruwini-thilakshika.jpg",
+        "image": "../src/Pic/BoD/Ruwini.jpg",
         "linkedin": "https://linkedin.com/in/ruwinithilakshika"
       },
       {
         "name": "Imanthi Poornima",
         "position": "Chief Membership Coordinator",
-        "image": "/team-imanthi-poornima.jpg",
+        "image": "../src/Pic/BoD/Imanthi.jpg",
         "linkedin": "https://linkedin.com/in/imanthipoornima"
       }
     ]
@@ -227,13 +227,13 @@
       {
         "name": "Ishara Dhananjaya",
         "position": "Chief Fundraising Coordinator",
-        "image": "/team-ishara-dhananjaya.jpg",
+        "image": "../src/Pic/BoD/Ishara.jpg",
         "linkedin": "https://linkedin.com/in/isharadhananjaya"
       },
       {
         "name": "Chandila Haresh",
         "position": "Chief Fundraising Coordinator",
-        "image": "/team-chandila-haresh.jpg",
+        "image": "../src/Pic/BoD/Chandila.jpg",
         "linkedin": "https://linkedin.com/in/chandilaharesh"
       }
     ]
@@ -244,13 +244,13 @@
       {
         "name": "Pasindu Dissanayake",
         "position": "Chief Fellowship Coordinator",
-        "image": "/team-pasindu-dissanayake.jpg",
+        "image": "../src/Pic/BoD/Pasindu.jpg",
         "linkedin": "https://linkedin.com/in/pasindudissanayake"
       },
       {
         "name": "Gimhani Wijesuriya",
         "position": "Chief Fellowship Coordinator",
-        "image": "/team-gimhani-wijesuriya.jpg",
+        "image": "../src/Pic/BoD/Gimhani.jpg",
         "linkedin": "https://linkedin.com/in/gimhaniwijesuriya"
       }
     ]
