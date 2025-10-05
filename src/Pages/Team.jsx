@@ -1,115 +1,158 @@
 import React, { useEffect } from 'react'
+import { useParams, useLocation } from 'react-router-dom'
 import './Team.css'
+import executiveBoard from '../json files/executiveBoard.json'
+import avenuedirectors from '../json files/avenuedirectors.json'
 
 function Team() {
-  useEffect(() => {
-    document.title = 'Team | Leo Society UOP'
-  }, [])
+  const { teamType } = useParams()
+  const location = useLocation()
+  
+  // Determine which team to show based on URL
+  const getTeamType = () => {
+    if (teamType === 'executive') return 'executive'
+    if (teamType === 'avenue-directors') return 'avenue-directors'
+    // Default to executive if no specific type or just /team
+    return 'executive'
+  }
+  
+  const currentTeamType = getTeamType()
+  
+  // Render Executive Board
+  const renderExecutiveBoard = () => (
+    <section className="executive-section">
+      <div className="container">
+        <div className="section-header">
+          <h2>Executive Board</h2>
+          <p>Our leadership team committed to serving with excellence and integrity.</p>
+        </div>
+        
+        {/* Leadership Row - President and Past President */}
+        <div className="leadership-section">
+          <div className="team-grid leadership-grid">
+            {executiveBoard
+              .filter(member => member.position === 'President' || member.position === 'Past President')
+              .map(member => (
+                <div key={member.id} className="member-card executive-card leadership-card">
+                  <div className="member-image">
+                    <img src={member.image} alt={member.name} />
+                    <div className="member-overlay">
+                      <div className="member-social">
+                        <a href={`mailto:${member.email}`} className="social-link email-link">
+                          <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.89 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                          </svg>
+                        </a>
+                        <a href={member.linkedin} className="social-link linkedin-link" target="_blank" rel="noopener noreferrer">
+                          <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="member-content">
+                    <h3>{member.name}</h3>
+                    <p className="position">{member.position}</p>
+                    <p className="bio">{member.bio}</p>
+                  </div>
+                </div>
+              ))}
+          </div>
+        </div>
 
-  const executiveBoard = [
-    {
-      id: 1,
-      name: "Sahan Perera",
-      position: "President",
-      department: "Engineering Faculty",
-      year: "3rd Year",
-      image: "/team-president.jpg",
-      bio: "Leading the Leo Society with passion for community service and youth development.",
-      email: "president@leosocietyuop.org",
-      linkedin: "https://linkedin.com/in/sahanperera"
-    },
-    {
-      id: 2,
-      name: "Kavya Fernando",
-      position: "Vice President",
-      department: "Medicine Faculty",
-      year: "2nd Year",
-      image: "/team-vp.jpg",
-      bio: "Dedicated to supporting community health initiatives and member development.",
-      email: "vp@leosocietyuop.org",
-      linkedin: "https://linkedin.com/in/kavyafernando"
-    },
-    {
-      id: 3,
-      name: "Ravindu Silva",
-      position: "Secretary",
-      department: "Science Faculty",
-      year: "3rd Year",
-      image: "/team-secretary.jpg",
-      bio: "Ensuring smooth operations and maintaining excellent communication channels.",
-      email: "secretary@leosocietyuop.org",
-      linkedin: "https://linkedin.com/in/ravindusilva"
-    },
-    {
-      id: 4,
-      name: "Tharushi Wijesinghe",
-      position: "Treasurer",
-      department: "Arts Faculty",
-      year: "2nd Year",
-      image: "/team-treasurer.jpg",
-      bio: "Managing finances with transparency and supporting sustainable growth.",
-      email: "treasurer@leosocietyuop.org",
-      linkedin: "https://linkedin.com/in/tharushiwijesinghe"
-    }
-  ]
-
-  const departmentHeads = [
-    {
-      id: 5,
-      name: "Mihiri Jayawardena",
-      position: "Project Director",
-      department: "Engineering Faculty",
-      year: "2nd Year",
-      image: "/team-projects.jpg",
-      bio: "Coordinating impactful community service projects and initiatives."
-    },
-    {
-      id: 6,
-      name: "Kasun Rathnayake",
-      position: "Events Director",
-      department: "Science Faculty",
-      year: "3rd Year",
-      image: "/team-events.jpg",
-      bio: "Creating memorable experiences and organizing successful events."
-    },
-    {
-      id: 7,
-      name: "Amara Bandara",
-      position: "Public Relations Director",
-      department: "Arts Faculty",
-      year: "2nd Year",
-      image: "/team-pr.jpg",
-      bio: "Building relationships and managing our public image and communications."
-    },
-    {
-      id: 8,
-      name: "Nadeesha Kumari",
-      position: "Membership Director",
-      department: "Medicine Faculty",
-      year: "1st Year",
-      image: "/team-membership.jpg",
-      bio: "Welcoming new members and fostering a strong Leo community."
-    }
-  ]
-
-  const advisors = [
-    {
-      id: 9,
-      name: "Prof. Chaminda Jayasekara",
-      position: "Faculty Advisor",
-      department: "Faculty of Engineering",
-      image: "/advisor-1.jpg",
-      bio: "Providing guidance and mentorship to ensure our activities align with university values."
-    },
-    {
-      id: 10,
-      name: "Dr. Samanthi Rodrigo",
-      position: "Leo Advisor",
-      department: "Lions Club of Kandy",
-      image: "/advisor-2.jpg",
-      bio: "Supporting our connection with Lions International and providing Leo guidance."
-    }
-  ]
+        {/* Other Executive Members - 3 per row */}
+        <div className="other-members-section">
+          <div className="team-grid executive-grid three-column">
+            {executiveBoard
+              .filter(member => member.position !== 'President' && member.position !== 'Past President')
+              .map(member => (
+                <div key={member.id} className="member-card executive-card">
+                  <div className="member-image">
+                    <img src={member.image} alt={member.name} />
+                    <div className="member-overlay">
+                      <div className="member-social">
+                        <a href={`mailto:${member.email}`} className="social-link email-link">
+                          <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.89 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                          </svg>
+                        </a>
+                        <a href={member.linkedin} className="social-link linkedin-link" target="_blank" rel="noopener noreferrer">
+                          <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="member-content">
+                    <h3>{member.name}</h3>
+                    <p className="position">{member.position}</p>
+                    <p className="bio">{member.bio}</p>
+                  </div>
+                </div>
+              ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+  
+  // Render Avenue Directors
+  const renderAvenueDirectors = () => (
+    <section className="avenue-directors-section">
+      <div className="container">
+        <div className="section-header">
+          <h2>Avenue Directors</h2>
+          <p>Dedicated leaders driving positive change across different avenues of service.</p>
+        </div>
+        
+        {avenuedirectors.map((avenue, avenueIndex) => (
+          <div key={avenueIndex} className="avenue-group">
+            <div className="avenue-header">
+              <h3 className="avenue-title">{avenue.avenue}</h3>
+            </div>
+            <div className="team-grid avenue-grid" data-members={avenue.members.length}>
+              {avenue.members.map((member, memberIndex) => (
+                <div key={memberIndex} className="member-card avenue-card">
+                  <div className="member-image">
+                    <img 
+                      src={member.image} 
+                      alt={member.name}
+                      onError={(e) => {
+                        e.target.src = 'https://via.placeholder.com/120x120/1e3c72/ffffff?text=' + member.name.split(' ').map(n => n[0]).join('')
+                      }}
+                    />
+                    <div className="member-overlay">
+                      <div className="member-social">
+                        {member.email && (
+                          <a href={`mailto:${member.email}`} className="social-link email-link">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                              <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.89 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                            </svg>
+                          </a>
+                        )}
+                        <a href={member.linkedin} className="social-link linkedin-link" target="_blank" rel="noopener noreferrer">
+                          <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="member-content">
+                    <h3>{member.name}</h3>
+                    <p className="position">{member.position}</p>
+                    {member.bio && <p className="bio">{member.bio}</p>}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  )
 
   return (
     <div className="team-page">
@@ -125,107 +168,7 @@ function Team() {
       </header>
 
       <main>
-        {/* Executive Board */}
-        <section className="executive-section">
-          <div className="container">
-            <div className="section-header">
-              <h2>Executive Board</h2>
-              <p>Our leadership team committed to serving with excellence and integrity.</p>
-            </div>
-            <div className="team-grid executive-grid">
-              {executiveBoard.map(member => (
-                <div key={member.id} className="member-card executive-card">
-                  <div className="member-image">
-                    <img src={member.image} alt={member.name} />
-                    <div className="member-overlay">
-                      <div className="member-social">
-                        <a href={`mailto:${member.email}`} className="social-link">
-                          📧
-                        </a>
-                        <a href={member.linkedin} className="social-link" target="_blank" rel="noopener noreferrer">
-                          💼
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="member-content">
-                    <h3>{member.name}</h3>
-                    <p className="position">{member.position}</p>
-                    <p className="department">{member.department} • {member.year}</p>
-                    <p className="bio">{member.bio}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Department Heads */}
-        <section className="department-section">
-          <div className="container">
-            <div className="section-header">
-              <h2>Department Directors</h2>
-              <p>Specialized leaders managing different aspects of our organization.</p>
-            </div>
-            <div className="team-grid">
-              {departmentHeads.map(member => (
-                <div key={member.id} className="member-card">
-                  <div className="member-image">
-                    <img src={member.image} alt={member.name} />
-                  </div>
-                  <div className="member-content">
-                    <h3>{member.name}</h3>
-                    <p className="position">{member.position}</p>
-                    <p className="department">{member.department} • {member.year}</p>
-                    <p className="bio">{member.bio}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Advisors */}
-        <section className="advisors-section">
-          <div className="container">
-            <div className="section-header">
-              <h2>Our Advisors</h2>
-              <p>Experienced mentors guiding our journey and supporting our growth.</p>
-            </div>
-            <div className="advisors-grid">
-              {advisors.map(advisor => (
-                <div key={advisor.id} className="advisor-card">
-                  <div className="advisor-image">
-                    <img src={advisor.image} alt={advisor.name} />
-                  </div>
-                  <div className="advisor-content">
-                    <h3>{advisor.name}</h3>
-                    <p className="position">{advisor.position}</p>
-                    <p className="department">{advisor.department}</p>
-                    <p className="bio">{advisor.bio}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Join Team CTA */}
-        <section className="join-team-section">
-          <div className="container">
-            <div className="join-team-content">
-              <h2>Want to Join Our Team?</h2>
-              <p>
-                We're always looking for passionate individuals who want to make a difference. 
-                Join us and become part of something bigger than yourself.
-              </p>
-              <div className="cta-buttons">
-                <button className="btn-primary">Apply Now</button>
-                <button className="btn-secondary">Learn More</button>
-              </div>
-            </div>
-          </div>
-        </section>
+        {currentTeamType === 'executive' ? renderExecutiveBoard() : renderAvenueDirectors()}
       </main>
     </div>
   )

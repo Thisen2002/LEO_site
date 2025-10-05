@@ -3,7 +3,7 @@
 }
 
 .team-hero {
-  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  background: linear-gradient(135deg, #1282e4 0%, #1418e7 100%);
   color: white;
   padding: 120px 0 80px;
   text-align: center;
@@ -78,6 +78,33 @@
   gap: 2.5rem;
 }
 
+.leadership-section {
+  margin-bottom: 4rem;
+}
+
+.leadership-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  max-width: 800px;
+  margin: 0 auto;
+  justify-items: center;
+}
+
+.leadership-card {
+  max-width: 350px;
+  width: 100%;
+}
+
+.other-members-section {
+  margin-top: 2rem;
+}
+
+.three-column {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
 .member-card {
   background: white;
   border-radius: 20px;
@@ -137,20 +164,43 @@
 }
 
 .social-link {
-  width: 40px;
-  height: 40px;
-  background: white;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  font-size: 1.2rem;
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.social-link svg {
+  width: 20px;
+  height: 20px;
 }
 
 .social-link:hover {
-  transform: scale(1.1);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.email-link {
+  background: linear-gradient(135deg, #ea4335, #fbbc05);
+  color: white;
+}
+
+.email-link:hover {
+  background: linear-gradient(135deg, #d33b2c, #f9ab00);
+}
+
+.linkedin-link {
+  background: linear-gradient(135deg, #0077b5, #00a0dc);
+  color: white;
+}
+
+.linkedin-link:hover {
+  background: linear-gradient(135deg, #005885, #0077b5);
 }
 
 .member-content {
@@ -301,6 +351,12 @@
   color: #667eea;
 }
 
+@media (max-width: 1024px) {
+  .three-column {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 768px) {
   .team-hero {
     padding: 100px 0 60px;
@@ -329,6 +385,16 @@
     grid-template-columns: 1fr;
   }
   
+  .leadership-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 350px;
+  }
+  
+  .three-column {
+    grid-template-columns: 1fr;
+  }
+  
   .advisors-grid {
     grid-template-columns: 1fr;
   }
@@ -353,5 +419,280 @@
   
   .btn-primary, .btn-secondary {
     width: 200px;
+  }
+}
+
+/* Avenue Directors Styles */
+.avenue-directors-section {
+  padding: 80px 0;
+  background: white;
+}
+
+.avenue-group {
+  margin-bottom: 80px;
+}
+
+.avenue-group:last-child {
+  margin-bottom: 0;
+}
+
+.avenue-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2rem 0;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.avenue-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #1e3c72;
+  margin-bottom: 10px;
+  position: relative;
+  display: inline-block;
+}
+
+.avenue-title::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #ffd700, #ffed4e);
+  border-radius: 2px;
+}
+
+.avenue-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+  justify-items: center;
+  align-items: start;
+}
+
+/* Ensure consistent spacing for different numbers of members */
+.avenue-grid[data-members="1"] {
+  grid-template-columns: minmax(320px, 400px);
+  justify-content: center;
+}
+
+.avenue-grid[data-members="2"] {
+  grid-template-columns: repeat(2, minmax(320px, 1fr));
+  max-width: 800px;
+  margin: 2rem auto 0;
+}
+
+.avenue-grid[data-members="3"] {
+  grid-template-columns: repeat(3, minmax(320px, 1fr));
+  max-width: 1200px;
+  margin: 2rem auto 0;
+}
+
+.avenue-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  border: 2px solid #ffd700;
+  width: 100%;
+  max-width: 320px;
+  min-height: 420px;
+  display: flex;
+  flex-direction: column;
+}
+
+.avenue-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.15);
+}
+
+.avenue-card .member-image {
+  position: relative;
+  height: 280px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.avenue-card .member-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.avenue-card:hover .member-image img {
+  transform: scale(1.05);
+}
+
+.avenue-card .member-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.avenue-card:hover .member-overlay {
+  opacity: 1;
+}
+
+.avenue-card .member-social {
+  display: flex;
+  gap: 1rem;
+}
+
+.avenue-card .social-link {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.avenue-card .social-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.avenue-card .social-link svg {
+  width: 20px;
+  height: 20px;
+}
+
+.avenue-card .email-link {
+  background: linear-gradient(135deg, #ea4335, #fbbc05);
+  color: white;
+}
+
+.avenue-card .email-link:hover {
+  background: linear-gradient(135deg, #d33b2c, #f9ab00);
+}
+
+.avenue-card .linkedin-link {
+  background: linear-gradient(135deg, #0077b5, #00a0dc);
+  color: white;
+}
+
+.avenue-card .linkedin-link:hover {
+  background: linear-gradient(135deg, #006fa6, #0091ca);
+}
+
+.avenue-card .member-content {
+  padding: 1.5rem;
+  text-align: center;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.avenue-card .member-content h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1e3c72;
+  margin-bottom: 0.5rem;
+  min-height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avenue-card .member-content .position {
+  color: #666;
+  font-weight: 500;
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+  min-height: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avenue-card .member-content .bio {
+  color: #555;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 0;
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+/* Responsive Design for Avenue Directors */
+@media (max-width: 768px) {
+  .avenue-directors-section {
+    padding: 60px 0;
+  }
+  
+  .avenue-group {
+    margin-bottom: 60px;
+  }
+  
+  .avenue-header {
+    margin-bottom: 2rem;
+    padding: 1.5rem 1rem;
+  }
+  
+  .avenue-title {
+    font-size: 1.8rem;
+  }
+  
+  .avenue-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem;
+    justify-items: center;
+    max-width: 100% !important;
+    margin: 2rem auto 0 !important;
+  }
+  
+  .avenue-card {
+    max-width: 100%;
+    width: 90%;
+    min-height: 400px;
+  }
+  
+  .avenue-card .member-image {
+    height: 250px;
+  }
+  
+  .avenue-card .member-content {
+    padding: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .avenue-title {
+    font-size: 1.5rem;
+  }
+  
+  .avenue-card {
+    width: 95%;
+    min-height: 380px;
+  }
+  
+  .avenue-card .member-image {
+    height: 220px;
+  }
+  
+  .avenue-header {
+    padding: 1rem;
   }
 }

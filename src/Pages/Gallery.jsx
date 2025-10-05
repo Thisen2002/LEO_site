@@ -1,100 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import './Gallery.css'
+import galleryItems from '../json files/gallery.json'
 
 function Gallery() {
-  useEffect(() => {
-    document.title = 'Gallery | Leo Society UOP'
-  }, [])
-
   const [activeCategory, setActiveCategory] = useState('all')
   const [selectedImage, setSelectedImage] = useState(null)
 
-  const galleryItems = [
-    {
-      id: 1,
-      title: "Annual Leo Convention 2024",
-      category: "events",
-      image: "/gallery-convention.jpg",
-      description: "Our biggest event of the year with inspiring speakers and workshops."
-    },
-    {
-      id: 2,
-      title: "Community Clean-up Drive",
-      category: "projects",
-      image: "/gallery-cleanup.jpg",
-      description: "Making our community cleaner and greener together."
-    },
-    {
-      id: 3,
-      title: "Executive Board Meeting",
-      category: "team",
-      image: "/gallery-meeting.jpg",
-      description: "Planning future initiatives and projects."
-    },
-    {
-      id: 4,
-      title: "Christmas Charity Distribution",
-      category: "projects",
-      image: "/gallery-charity.jpg",
-      description: "Spreading joy and hope during the holiday season."
-    },
-    {
-      id: 5,
-      title: "New Member Orientation",
-      category: "events",
-      image: "/gallery-orientation.jpg",
-      description: "Welcoming new members to our Leo family."
-    },
-    {
-      id: 6,
-      title: "Team Building Activities",
-      category: "team",
-      image: "/gallery-team-building.jpg",
-      description: "Strengthening bonds and building friendships."
-    },
-    {
-      id: 7,
-      title: "Environmental Awareness Campaign",
-      category: "projects",
-      image: "/gallery-environment.jpg",
-      description: "Educating the community about environmental conservation."
-    },
-    {
-      id: 8,
-      title: "Leadership Workshop",
-      category: "events",
-      image: "/gallery-workshop.jpg",
-      description: "Developing leadership skills and personal growth."
-    },
-    {
-      id: 9,
-      title: "Fundraising Gala",
-      category: "events",
-      image: "/gallery-gala.jpg",
-      description: "Raising funds for our community service projects."
-    },
-    {
-      id: 10,
-      title: "School Renovation Project",
-      category: "projects",
-      image: "/gallery-renovation.jpg",
-      description: "Improving educational facilities for local students."
-    },
-    {
-      id: 11,
-      title: "Leo Youth Summit",
-      category: "events",
-      image: "/gallery-summit.jpg",
-      description: "Connecting with Leo clubs from other universities."
-    },
-    {
-      id: 12,
-      title: "Board Planning Retreat",
-      category: "team",
-      image: "/gallery-retreat.jpg",
-      description: "Strategic planning for the upcoming year."
-    }
-  ]
+  // const galleryItems = [
+    
+  // ]
 
   const categories = [
     { id: 'all', name: 'All Photos', count: galleryItems.length },
@@ -180,7 +94,7 @@ function Gallery() {
           </div>
         </section>
 
-        {/* Photo Submission CTA */}
+        {/* Photo Submission CTA
         <section className="photo-submission-section">
           <div className="container">
             <div className="submission-content">
@@ -192,7 +106,7 @@ function Gallery() {
               <button className="submit-photos-btn">Submit Photos</button>
             </div>
           </div>
-        </section>
+        </section> */}
       </main>
 
       {/* Lightbox Modal */}

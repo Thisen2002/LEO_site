@@ -5,6 +5,7 @@ import './Navbar.css';
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const [isTeamDropdownOpen, setIsTeamDropdownOpen] = useState(false)
   const location = useLocation()
 
   // Handle scroll effect
@@ -33,11 +34,19 @@ function Navbar() {
     return location.pathname === path
   }
 
+  const toggleTeamDropdown = () => {
+    setIsTeamDropdownOpen(!isTeamDropdownOpen)
+  }
+
+  const closeTeamDropdown = () => {
+    setIsTeamDropdownOpen(false)
+  }
+
   return (
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="nav-container">
         <div className="nav-brand">
-          <img src="/leo-logo.png" alt="Leo Logo" className="nav-logo" />
+          <img src="../public/leo-logo-black-and-white.png" alt="Leo Logo" className="nav-logo" />
           <span className="nav-title">Leo Society UOP</span>
         </div>
         
@@ -45,8 +54,38 @@ function Navbar() {
           <Link to="/" className={`nav-link ${isActive('/') ? 'active' : ''}`} onClick={closeMenu}>Home</Link>
           <Link to="/about" className={`nav-link ${isActive('/about') ? 'active' : ''}`} onClick={closeMenu}>About</Link>
           <Link to="/projects" className={`nav-link ${isActive('/projects') ? 'active' : ''}`} onClick={closeMenu}>Projects</Link>
-          <Link to="/events" className={`nav-link ${isActive('/events') ? 'active' : ''}`} onClick={closeMenu}>Events</Link>
-          <Link to="/team" className={`nav-link ${isActive('/team') ? 'active' : ''}`} onClick={closeMenu}>Team</Link>
+          {/* <Link to="/events" className={`nav-link ${isActive('/events') ? 'active' : ''}`} onClick={closeMenu}>Events</Link> */}
+          
+          {/* Team Dropdown */}
+          <div className="nav-dropdown" onMouseLeave={closeTeamDropdown}>
+            <button 
+              className={`nav-link dropdown-toggle ${isActive('/team') || isActive('/team/executive') || isActive('/team/avenue-directors') ? 'active' : ''}`} 
+              onMouseEnter={toggleTeamDropdown}
+              onClick={toggleTeamDropdown}
+            >
+              Team
+              <span className="dropdown-arrow">▼</span>
+            </button>
+            {isTeamDropdownOpen && (
+              <div className="dropdown-menu">
+                <Link 
+                  to="/team/executive" 
+                  className="dropdown-item" 
+                  onClick={() => { closeMenu(); closeTeamDropdown(); }}
+                >
+                  Executive Board
+                </Link>
+                <Link 
+                  to="/team/avenue-directors" 
+                  className="dropdown-item" 
+                  onClick={() => { closeMenu(); closeTeamDropdown(); }}
+                >
+                  Avenue Directors
+                </Link>
+              </div>
+            )}
+          </div>
+          
           <Link to="/gallery" className={`nav-link ${isActive('/gallery') ? 'active' : ''}`} onClick={closeMenu}>Gallery</Link>
           <Link to="/contact" className={`nav-link ${isActive('/contact') ? 'active' : ''}`} onClick={closeMenu}>Contact</Link>
           <button className="nav-cta-button">Join Us</button>
