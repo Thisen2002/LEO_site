@@ -125,7 +125,7 @@
 
 .member-image {
   position: relative;
-  height: 280px;
+  height: 300px;
   overflow: hidden;
 }
 
@@ -428,69 +428,22 @@
   background: white;
 }
 
-.avenue-group {
-  margin-bottom: 80px;
-}
-
-.avenue-group:last-child {
-  margin-bottom: 0;
-}
-
-.avenue-header {
-  text-align: center;
-  margin-bottom: 3rem;
-  padding: 2rem 0;
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-  border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-}
-
-.avenue-title {
-  font-size: 2.2rem;
-  font-weight: 700;
-  color: #1e3c72;
-  margin-bottom: 10px;
-  position: relative;
-  display: inline-block;
-}
-
-.avenue-title::after {
-  content: '';
-  position: absolute;
-  bottom: -12px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80px;
-  height: 4px;
-  background: linear-gradient(90deg, #ffd700, #ffed4e);
-  border-radius: 2px;
-}
-
-.avenue-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 2rem;
+.avenue-grid-flat {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
   margin-top: 2rem;
-  justify-items: center;
-  align-items: start;
-}
-
-/* Ensure consistent spacing for different numbers of members */
-.avenue-grid[data-members="1"] {
-  grid-template-columns: minmax(320px, 400px);
   justify-content: center;
-}
-
-.avenue-grid[data-members="2"] {
-  grid-template-columns: repeat(2, minmax(320px, 1fr));
-  max-width: 800px;
-  margin: 2rem auto 0;
-}
-
-.avenue-grid[data-members="3"] {
-  grid-template-columns: repeat(3, minmax(320px, 1fr));
+  align-items: flex-start;
   max-width: 1200px;
-  margin: 2rem auto 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.avenue-grid-flat .avenue-card {
+  flex: 0 0 calc(33.333% - 1.67rem);
+  max-width: 360px;
+  min-width: 300px;
 }
 
 .avenue-card {
@@ -618,11 +571,24 @@
   color: #666;
   font-weight: 500;
   font-size: 1rem;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
   min-height: 1.2rem;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.avenue-card .member-content .avenue {
+  color: #1e3c72;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+  text-align: center;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  border: 1px solid #ffd700;
+  line-height: 1.3;
 }
 
 .avenue-card .member-content .bio {
@@ -637,35 +603,34 @@
 }
 
 /* Responsive Design for Avenue Directors */
+@media (max-width: 1024px) {
+  .avenue-grid-flat .avenue-card {
+    flex: 0 0 calc(50% - 1.25rem);
+  }
+  
+  .avenue-grid-flat {
+    max-width: 800px;
+  }
+}
+
 @media (max-width: 768px) {
   .avenue-directors-section {
     padding: 60px 0;
   }
   
-  .avenue-group {
-    margin-bottom: 60px;
+  .avenue-grid-flat {
+    gap: 2rem;
+    max-width: 600px;
   }
   
-  .avenue-header {
-    margin-bottom: 2rem;
-    padding: 1.5rem 1rem;
-  }
-  
-  .avenue-title {
-    font-size: 1.8rem;
-  }
-  
-  .avenue-grid {
-    grid-template-columns: 1fr !important;
-    gap: 1.5rem;
-    justify-items: center;
-    max-width: 100% !important;
-    margin: 2rem auto 0 !important;
+  .avenue-grid-flat .avenue-card {
+    flex: 0 0 calc(50% - 1rem);
+    min-width: 280px;
   }
   
   .avenue-card {
     max-width: 100%;
-    width: 90%;
+    width: 100%;
     min-height: 400px;
   }
   
@@ -679,20 +644,22 @@
 }
 
 @media (max-width: 480px) {
-  .avenue-title {
-    font-size: 1.5rem;
+  .avenue-grid-flat {
+    gap: 1.5rem;
+    max-width: 360px;
+  }
+  
+  .avenue-grid-flat .avenue-card {
+    flex: 0 0 100%;
+    min-width: auto;
   }
   
   .avenue-card {
-    width: 95%;
+    width: 100%;
     min-height: 380px;
   }
   
   .avenue-card .member-image {
     height: 220px;
-  }
-  
-  .avenue-header {
-    padding: 1rem;
   }
 }
