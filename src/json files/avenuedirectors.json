@@ -6,6 +6,7 @@
         "name": "Lihini Sahanya",
         "position": "Director",
         "image": "/team-lihini-sahanya.jpg",
+        "email": "lihini.sahanya@leo.org",
         "linkedin": "https://linkedin.com/in/lihinisahanya"
       }
     ]
@@ -17,12 +18,14 @@
         "name": "Dananga Oshadhi",
         "position": "Co-Director",
         "image": "/team-dananga-oshadhi.jpg",
+        "email": "dananga.oshadhi@leo.org",
         "linkedin": "https://linkedin.com/in/danangaoshadhi"
       },
       {
         "name": "Rashini Shenaya",
         "position": "Co-Director",
         "image": "/team-rashini-shenaya.jpg",
+        "email": "rashini.shenaya@leo.org",
         "linkedin": "https://linkedin.com/in/rashinishenaya"
       }
     ]
