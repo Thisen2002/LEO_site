@@ -53,48 +53,6 @@ function Team() {
             </div>
           </div>
         </section>
-
-        {/* Department Heads
-        <section className="department-section">
-          <div className="container">
-            <div className="section-header">
-              <h2>Department Directors</h2>
-              <p>Specialized leaders managing different aspects of our organization.</p>
-            </div>
-            <div className="team-grid">
-              {departmentHeads.map(member => (
-                <div key={member.id} className="member-card">
-                  <div className="member-image">
-                    <img src={member.image} alt={member.name} />
-                  </div>
-                  <div className="member-content">
-                    <h3>{member.name}</h3>
-                    <p className="position">{member.position}</p>
-                    <p className="department">{member.department} • {member.year}</p>
-                    <p className="bio">{member.bio}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section> */}
-
-        {/* Join Team CTA */}
-        {/* <section className="join-team-section">
-          <div className="container">
-            <div className="join-team-content">
-              <h2>Want to Join Our Team?</h2>
-              <p>
-                We're always looking for passionate individuals who want to make a difference. 
-                Join us and become part of something bigger than yourself.
-              </p>
-              <div className="cta-buttons">
-                <button className="btn-primary">Apply Now</button>
-                <button className="btn-secondary">Learn More</button>
-              </div>
-            </div>
-          </div>
-        </section> */}
       </main>
     </div>
   )

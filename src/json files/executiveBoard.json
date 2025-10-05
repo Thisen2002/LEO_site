@@ -1,46 +1,65 @@
 [
   {
     "id": 1,
-    "name": "Sahan Perera",
+    "name": "Shaman Karunarathne",
     "position": "President",
-    "department": "Engineering Faculty",
-    "year": "3rd Year",
     "image": "/team-president.jpg",
     "bio": "Leading the Leo Society with passion for community service and youth development.",
     "email": "president@leosocietyuop.org",
-    "linkedin": "https://linkedin.com/in/sahanperera"
+    "linkedin": "https://linkedin.com/in/shamankarunarathne"
   },
   {
     "id": 2,
-    "name": "Kavya Fernando",
+    "name": "Nethmie Nimesha",
     "position": "Vice President",
-    "department": "Medicine Faculty",
-    "year": "2nd Year",
-    "image": "/team-vp.jpg",
-    "bio": "Dedicated to supporting community health initiatives and member development.",
-    "email": "vp@leosocietyuop.org",
-    "linkedin": "https://linkedin.com/in/kavyafernando"
+    "image": "/team-vice-president1.jpg",
+    "bio": "Dedicated to empowering youth and fostering impactful service initiatives.",
+    "email": "vp1@leosocietyuop.org",
+    "linkedin": "https://linkedin.com/in/nethmienimesha"
   },
   {
     "id": 3,
-    "name": "Ravindu Silva",
-    "position": "Secretary",
-    "department": "Science Faculty",
-    "year": "3rd Year",
-    "image": "/team-secretary.jpg",
-    "bio": "Ensuring smooth operations and maintaining excellent communication channels.",
-    "email": "secretary@leosocietyuop.org",
-    "linkedin": "https://linkedin.com/in/ravindusilva"
+    "name": "Sahan Wijendra",
+    "position": "Vice President",
+    "image": "/team-vice-president2.jpg",
+    "bio": "Striving to build unity and creativity within the Leo community.",
+    "email": "vp2@leosocietyuop.org",
+    "linkedin": "https://linkedin.com/in/sahanwijendra"
   },
   {
     "id": 4,
-    "name": "Tharushi Wijesinghe",
+    "name": "Amayuru Senadheera",
+    "position": "Secretary",
+    "image": "/team-secretary.jpg",
+    "bio": "Ensuring smooth communication and efficient documentation across all club activities.",
+    "email": "secretary@leosocietyuop.org",
+    "linkedin": "https://linkedin.com/in/amayurusenadheera"
+  },
+  {
+    "id": 5,
+    "name": "Bhawana Ariyarathne",
+    "position": "Assistant Secretary",
+    "image": "/team-assistant-secretary.jpg",
+    "bio": "Supporting administration and helping the club stay organized and active.",
+    "email": "asecretary@leosocietyuop.org",
+    "linkedin": "https://linkedin.com/in/bhawanariyarathne"
+  },
+  {
+    "id": 6,
+    "name": "Dunith Fernando",
     "position": "Treasurer",
-    "department": "Arts Faculty",
-    "year": "2nd Year",
     "image": "/team-treasurer.jpg",
-    "bio": "Managing finances with transparency and supporting sustainable growth.",
+    "bio": "Managing club finances responsibly to ensure transparency and growth.",
     "email": "treasurer@leosocietyuop.org",
-    "linkedin": "https://linkedin.com/in/tharushiwijesinghe"
+    "linkedin": "https://linkedin.com/in/dunithfernando"
+  },
+  {
+    "id": 7,
+    "name": "Thisen Lakdinu",
+    "position": "Assistant Treasurer",
+    "image": "/team-assistant-treasurer.jpg",
+    "bio": "Assisting in financial planning and supporting all budgetary operations.",
+    "email": "atreasurer@leosocietyuop.org",
+    "linkedin": "https://linkedin.com/in/thisenlakdinu"
   }
 ]

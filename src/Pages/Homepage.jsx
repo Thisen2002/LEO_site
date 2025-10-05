@@ -1,11 +1,38 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import './Homepage.css' // Make sure to create this CSS file
 
+// Import hero section images
+import img1 from '../Pic/hero_section/IMG-1.jpg'
+import img2 from '../Pic/hero_section/IMG-2.jpg'
+import img3 from '../Pic/hero_section/IMG-3.jpg'
+import img4 from '../Pic/hero_section/IMG-4.jpg'
+
 function Homepage() {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const heroImages = [img1, img2, img3, img4];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => 
+        (prevIndex + 1) % heroImages.length
+      );
+    }, 5000); // Change image every 5 seconds
+
+    return () => clearInterval(interval);
+  }, [heroImages.length]);
+
+  
   return (
     <div className="homepage">
       {/* Hero Section */}
       <section className="hero-section">
+        <div 
+          className="hero-background"
+          style={{
+            backgroundImage: `url(${heroImages[currentImageIndex]})`, 
+          }}
+        />
+        <div className="hero-overlay"></div>
         <div className="hero-content">
           <img src="../public/leo-logo-black-and-white.png" alt="Leo Society Logo" className="logo" />
           <h1>Leo Society</h1>

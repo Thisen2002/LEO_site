@@ -1,38 +1,255 @@
 [
   {
-    "id": 5,
-    "name": "Mihiri Jayawardena",
-    "position": "Project Director",
-    "department": "Engineering Faculty",
-    "year": "2nd Year",
-    "image": "/team-projects.jpg",
-    "bio": "Coordinating impactful community service projects and initiatives."
+    "avenue": "Women Empowerment",
+    "members": [
+      {
+        "name": "Lihini Sahanya",
+        "position": "Director",
+        "image": "/team-lihini-sahanya.jpg",
+        "linkedin": "https://linkedin.com/in/lihinisahanya"
+      }
+    ]
   },
   {
-    "id": 6,
-    "name": "Kasun Rathnayake",
-    "position": "Events Director",
-    "department": "Science Faculty",
-    "year": "3rd Year",
-    "image": "/team-events.jpg",
-    "bio": "Creating memorable experiences and organizing successful events."
+    "avenue": "Child Care & Youth Empowerment",
+    "members": [
+      {
+        "name": "Dananga Oshadhi",
+        "position": "Co-Director",
+        "image": "/team-dananga-oshadhi.jpg",
+        "linkedin": "https://linkedin.com/in/danangaoshadhi"
+      },
+      {
+        "name": "Rashini Shenaya",
+        "position": "Co-Director",
+        "image": "/team-rashini-shenaya.jpg",
+        "linkedin": "https://linkedin.com/in/rashinishenaya"
+      }
+    ]
   },
   {
-    "id": 7,
-    "name": "Amara Bandara",
-    "position": "Public Relations Director",
-    "department": "Arts Faculty",
-    "year": "2nd Year",
-    "image": "/team-pr.jpg",
-    "bio": "Building relationships and managing our public image and communications."
+    "avenue": "Education & Literacy Development",
+    "members": [
+      {
+        "name": "Melani Chandrathilake",
+        "position": "Co-Director",
+        "image": "/team-melani-chandrathilake.jpg",
+        "linkedin": "https://linkedin.com/in/melanichandrathilake"
+      },
+      {
+        "name": "Nadeesha Munaweera",
+        "position": "Co-Director",
+        "image": "/team-nadeesha-munaweera.jpg",
+        "linkedin": "https://linkedin.com/in/nadeeshamunaweera"
+      }
+    ]
   },
   {
-    "id": 8,
-    "name": "Nadeesha Kumari",
-    "position": "Membership Director",
-    "department": "Medicine Faculty",
-    "year": "1st Year",
-    "image": "/team-membership.jpg",
-    "bio": "Welcoming new members and fostering a strong Leo community."
+    "avenue": "Senior Citizenship Development",
+    "members": [
+      {
+        "name": "Hansika Dilushini",
+        "position": "Director",
+        "image": "/team-hansika-dilushini.jpg",
+        "linkedin": "https://linkedin.com/in/hansikadilushini"
+      }
+    ]
+  },
+  {
+    "avenue": "Professional Development",
+    "members": [
+      {
+        "name": "Jayani Chandrapala",
+        "position": "Director",
+        "image": "/team-jayani-chandrapala.jpg",
+        "linkedin": "https://linkedin.com/in/jayanichandrapala"
+      }
+    ]
+  },
+  {
+    "avenue": "Health & Nutrition Development",
+    "members": [
+      {
+        "name": "Madini Ariyarathne",
+        "position": "Director",
+        "image": "/team-madini-ariyarathne.jpg",
+        "linkedin": "https://linkedin.com/in/madiniariyarathne"
+      }
+    ]
+  },
+  {
+    "avenue": "Environmental Development",
+    "members": [
+      {
+        "name": "Vihansa Niduwari",
+        "position": "Director",
+        "image": "/team-vihansa-niduwari.jpg",
+        "linkedin": "https://linkedin.com/in/vihansaniduwari"
+      }
+    ]
+  },
+  {
+    "avenue": "Community Development",
+    "members": [
+      {
+        "name": "Chamodha Nethmini",
+        "position": "Co-Director",
+        "image": "/team-chamodha-nethmini.jpg",
+        "linkedin": "https://linkedin.com/in/chamodhanethmini"
+      },
+      {
+        "name": "Kavindi Madushani",
+        "position": "Co-Director",
+        "image": "/team-kavindi-madushani.jpg",
+        "linkedin": "https://linkedin.com/in/kavindimadushani"
+      }
+    ]
+  },
+  {
+    "avenue": "Sports & Recreation",
+    "members": [
+      {
+        "name": "Poorni Dedigamuwa",
+        "position": "Director",
+        "image": "/team-poorni-dedigamuwa.jpg",
+        "linkedin": "https://linkedin.com/in/poornidedigamuwa"
+      }
+    ]
+  },
+  {
+    "avenue": "External Affairs",
+    "members": [
+      {
+        "name": "Sumith Prasanna",
+        "position": "Director",
+        "image": "/team-sumith-prasanna.jpg",
+        "linkedin": "https://linkedin.com/in/sumithprasanna"
+      }
+    ]
+  },
+  {
+    "avenue": "Religious & Cultural Affairs",
+    "members": [
+      {
+        "name": "Dileep Sathsara",
+        "position": "Director",
+        "image": "/team-dileep-sathsara.jpg",
+        "linkedin": "https://linkedin.com/in/dileepsathsara"
+      }
+    ]
+  },
+  {
+    "avenue": "Chief Activity Coordinators",
+    "members": [
+      {
+        "name": "Sahiru Siriwardhana",
+        "position": "Chief Activity Coordinator",
+        "image": "/team-sahiru-siriwardhana.jpg",
+        "linkedin": "https://linkedin.com/in/sahirusiriwardhana"
+      },
+      {
+        "name": "Rasinindu Hemathilake",
+        "position": "Chief Activity Coordinator",
+        "image": "/team-rasinindu-hemathilake.jpg",
+        "linkedin": "https://linkedin.com/in/rasininduhemathilake"
+      }
+    ]
+  },
+  {
+    "avenue": "Editorial Board",
+    "members": [
+      {
+        "name": "Afra Mulafar",
+        "position": "Chief Editor",
+        "image": "/team-afra-mulafar.jpg",
+        "linkedin": "https://linkedin.com/in/aframulafar"
+      },
+      {
+        "name": "Charuni Bandara",
+        "position": "Sub Editor",
+        "image": "/team-charuni-bandara.jpg",
+        "linkedin": "https://linkedin.com/in/charunibandara"
+      }
+    ]
+  },
+  {
+    "avenue": "Media & Relations",
+    "members": [
+      {
+        "name": "Pabasara Wijayathilaka",
+        "position": "Chief Media & Relations Officer (Digital)",
+        "image": "/team-pabasara-wijayathilaka.jpg",
+        "linkedin": "https://linkedin.com/in/pabasarawijayathilaka"
+      },
+      {
+        "name": "Mihiri Rambukwella",
+        "position": "Chief Media & Relations Officer (Digital)",
+        "image": "/team-mihiri-rambukwella.jpg",
+        "linkedin": "https://linkedin.com/in/mihirirambukwella"
+      },
+      {
+        "name": "Buddhi Kaushan",
+        "position": "Chief Media & Relations Officer (PR)",
+        "image": "/team-buddhi-kaushan.jpg",
+        "linkedin": "https://linkedin.com/in/buddhikaushan"
+      },
+      {
+        "name": "Heshan Godellawaththa",
+        "position": "Chief Media & Relations Officer (PR)",
+        "image": "/team-heshan-godellawaththa.jpg",
+        "linkedin": "https://linkedin.com/in/heshangodellawaththa"
+      }
+    ]
+  },
+  {
+    "avenue": "Chief Membership",
+    "members": [
+      {
+        "name": "Ruwini Thilakshika",
+        "position": "Chief Membership Coordinator",
+        "image": "/team-ruwini-thilakshika.jpg",
+        "linkedin": "https://linkedin.com/in/ruwinithilakshika"
+      },
+      {
+        "name": "Imanthi Poornima",
+        "position": "Chief Membership Coordinator",
+        "image": "/team-imanthi-poornima.jpg",
+        "linkedin": "https://linkedin.com/in/imanthipoornima"
+      }
+    ]
+  },
+  {
+    "avenue": "Chief Fundraising",
+    "members": [
+      {
+        "name": "Ishara Dhananjaya",
+        "position": "Chief Fundraising Coordinator",
+        "image": "/team-ishara-dhananjaya.jpg",
+        "linkedin": "https://linkedin.com/in/isharadhananjaya"
+      },
+      {
+        "name": "Chandila Haresh",
+        "position": "Chief Fundraising Coordinator",
+        "image": "/team-chandila-haresh.jpg",
+        "linkedin": "https://linkedin.com/in/chandilaharesh"
+      }
+    ]
+  },
+  {
+    "avenue": "Chief Fellowship",
+    "members": [
+      {
+        "name": "Pasindu Dissanayake",
+        "position": "Chief Fellowship Coordinator",
+        "image": "/team-pasindu-dissanayake.jpg",
+        "linkedin": "https://linkedin.com/in/pasindudissanayake"
+      },
+      {
+        "name": "Gimhani Wijesuriya",
+        "position": "Chief Fellowship Coordinator",
+        "image": "/team-gimhani-wijesuriya.jpg",
+        "linkedin": "https://linkedin.com/in/gimhaniwijesuriya"
+      }
+    ]
   }
 ]
