@@ -34,7 +34,7 @@ function Homepage() {
         />
         <div className="hero-overlay"></div>
         <div className="hero-content">
-          <img src="../public/leo-logo-black-and-white.png" alt="Leo Society Logo" className="logo" />
+          <img src="/leo-logo-black-and-white.png" alt="Leo Society Logo" className="logo" />
           <h1>Leo Society</h1>
           <h2>University of Peradeniya</h2>
           <p className="tagline">We Serve with Pride</p>
