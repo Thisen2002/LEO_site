@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react'
 import './Homepage.css' // Make sure to create this CSS file
 
 // Import hero section images
-import img1 from '../Pic/hero_section/IMG-1.jpg'
-import img2 from '../Pic/hero_section/IMG-2.jpg'
-import img3 from '../Pic/hero_section/IMG-3.jpg'
-import img4 from '../Pic/hero_section/IMG-4.jpg'
+import img1 from '/Pic/hero_section/IMG-1.jpg'
+import img2 from '/Pic/hero_section/IMG-2.jpg'
+import img3 from '/Pic/hero_section/IMG-3.jpg'
+import img4 from '/Pic/hero_section/IMG-4.jpg'
 
 function Homepage() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
