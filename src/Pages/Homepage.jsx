@@ -26,10 +26,10 @@ function Homepage() {
   const [activitiesRef, activitiesVisible] = useStaggerAnimation(4, 150);
   
   // Counter animations for stats
-  const [statsRef1, count1] = useCounterAnimation(150, 2000);
+  const [statsRef1, count1] = useCounterAnimation(200, 2000);
   const [statsRef2, count2] = useCounterAnimation(50, 2000);
   const [statsRef3, count3] = useCounterAnimation(10000, 2500);
-  const [statsRef4, count4] = useCounterAnimation(15, 1500);
+  const [statsRef4, count4] = useCounterAnimation(3, 1500);
   
   const [ctaRef, ctaVisible] = useScrollAnimation(ANIMATION_CONFIGS.section);
 
@@ -57,12 +57,12 @@ function Homepage() {
         <div className="hero-overlay"></div>
         <div className={`hero-content ${getAnimationClass('fadeInUp', heroVisible)}`}>
           <img 
-            src="/leo-logo-black-and-white.png" 
+            src="/Leo_UoP.png" 
             alt="Leo Society Logo" 
             className={`logo ${getAnimationClass('scaleIn', heroVisible)} animate-delay-200`}
           />
           <h1 className={`${getAnimationClass('slideInUp', heroVisible)} animate-delay-400`}>
-            Leo Society
+            Leo club
           </h1>
           <h2 className={`${getAnimationClass('slideInUp', heroVisible)} animate-delay-600`}>
             University of Peradeniya

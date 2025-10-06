@@ -11,8 +11,8 @@ function Footer() {
         <div className="footer-top">
           <div className="footer-brand">
             <Link to="/" className="brand-link" onClick={() => window.scrollTo(0, 0)}>
-              <img src="/leo-logo-black-and-white.png" alt="Leo" className="footer-logo" />
-              <span className="brand-text">Leo Society UOP</span>
+              <img src="/Leo Emblem.png" alt="Leo" className="footer-logo" />
+              <span className="brand-text">Leo club of University of Peradeniya</span>
             </Link>
             <p className="brand-tagline">Empowering young leaders through service</p>
           </div>
@@ -52,8 +52,8 @@ function Footer() {
         <div className="footer-divider"></div>
         
         <div className="footer-bottom">
-          <span className="copyright">&copy; {currentYear} Leo Society UOP</span>
-          <span className="affiliation">Leo Clubs International</span>
+          <span className="copyright">&copy; {currentYear} Leo club of University of Peradeniya</span>
+          <span className="affiliation">Leo District 306 D9 <br />Part of Lions Club International</span>
         </div>
       </div>
     </footer>

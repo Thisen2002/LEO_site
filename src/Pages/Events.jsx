@@ -10,7 +10,7 @@ import {
 
 function Events() {
   useEffect(() => {
-    document.title = 'Events | Leo Society UOP'
+    document.title = 'Events | Leo club of University of Peradeniya'
   }, [])
 
   const [activeTab, setActiveTab] = useState('upcoming')
