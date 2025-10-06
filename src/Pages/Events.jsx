@@ -1,5 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import './Events.css'
+import '../utils/scrollAnimations.css'
+import { 
+  useScrollAnimation, 
+  useStaggerAnimation,
+  getAnimationClass,
+  ANIMATION_CONFIGS
+} from '../utils/scrollAnimations'
 
 function Events() {
   useEffect(() => {
@@ -7,6 +14,11 @@ function Events() {
   }, [])
 
   const [activeTab, setActiveTab] = useState('upcoming')
+  
+  // Animation hooks
+  const [heroRef, heroVisible] = useScrollAnimation(ANIMATION_CONFIGS.hero);
+  const [tabsRef, tabsVisible] = useScrollAnimation(ANIMATION_CONFIGS.section);
+  const [eventsRef, eventsVisible] = useStaggerAnimation(6, 100);
 
   const upcomingEvents = [
     {
@@ -97,11 +109,11 @@ function Events() {
 
   return (
     <div className="events-page">
-      <header className="events-hero">
+      <header className="events-hero" ref={heroRef}>
         <div className="container">
-          <p className="eyebrow">Get Involved</p>
-          <h1>Events & Activities</h1>
-          <p className="subtitle">
+          <p className={`eyebrow ${getAnimationClass('fadeInUp', heroVisible)}`}>Get Involved</p>
+          <h1 className={`${getAnimationClass('slideInUp', heroVisible)} animate-delay-200`}>Events & Activities</h1>
+          <p className={`subtitle ${getAnimationClass('fadeInUp', heroVisible)} animate-delay-400`}>
             Join us in our upcoming events and discover how you can make a difference 
             in your community while building lasting friendships.
           </p>
@@ -111,15 +123,15 @@ function Events() {
       <main>
         <section className="events-content">
           <div className="container">
-            <div className="events-tabs">
+            <div className={`events-tabs ${getAnimationClass('slideInUp', tabsVisible)}`} ref={tabsRef}>
               <button 
-                className={`tab-button ${activeTab === 'upcoming' ? 'active' : ''}`}
+                className={`tab-button ${activeTab === 'upcoming' ? 'active' : ''} button-animation ${tabsVisible ? 'animate-visible' : 'animate-hidden'}`}
                 onClick={() => setActiveTab('upcoming')}
               >
                 Upcoming Events
               </button>
               <button 
-                className={`tab-button ${activeTab === 'past' ? 'active' : ''}`}
+                className={`tab-button ${activeTab === 'past' ? 'active' : ''} button-animation ${tabsVisible ? 'animate-visible' : 'animate-hidden'} animate-delay-200`}
                 onClick={() => setActiveTab('past')}
               >
                 Past Events
@@ -127,9 +139,9 @@ function Events() {
             </div>
 
             {activeTab === 'upcoming' && (
-              <div className="events-grid">
-                {upcomingEvents.map(event => (
-                  <div key={event.id} className={`event-card ${event.featured ? 'featured' : ''}`}>
+              <div className="events-grid" ref={eventsRef}>
+                {upcomingEvents.map((event, index) => (
+                  <div key={event.id} className={`event-card ${event.featured ? 'featured' : ''} card-animation ${eventsVisible.has(index) ? 'animate-visible' : 'animate-hidden'}`}>
                     <div className="event-image">
                       <img src={event.image} alt={event.title} />
                       <div 
@@ -160,8 +172,8 @@ function Events() {
 
             {activeTab === 'past' && (
               <div className="events-grid">
-                {pastEvents.map(event => (
-                  <div key={event.id} className="event-card past-event">
+                {pastEvents.map((event, index) => (
+                  <div key={event.id} className={`event-card past-event card-animation ${eventsVisible.has(index) ? 'animate-visible' : 'animate-hidden'}`}>
                     <div className="event-image">
                       <img src={event.image} alt={event.title} />
                       <div 

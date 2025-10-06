@@ -1,5 +1,12 @@
 import React, { useState } from 'react'
 import './Contact.css'
+import '../utils/scrollAnimations.css'
+import { 
+  useScrollAnimation, 
+  useStaggerAnimation,
+  getAnimationClass,
+  ANIMATION_CONFIGS
+} from '../utils/scrollAnimations'
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -8,6 +15,11 @@ function Contact() {
     subject: '',
     message: ''
   })
+  
+  // Animation hooks
+  const [heroRef, heroVisible] = useScrollAnimation(ANIMATION_CONFIGS.hero);
+  const [contactRef, contactVisible] = useStaggerAnimation(3, 200);
+  const [formRef, formVisible] = useScrollAnimation(ANIMATION_CONFIGS.section);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target
@@ -42,10 +54,10 @@ function Contact() {
   return (
     <div className="contact-page">
       {/* Header Section */}
-      <section className="contact-header">
+      <section className="contact-header" ref={heroRef}>
         <div className="container">
-          <h1>Contact Us</h1>
-          <p>Get in touch with the Leo Society of University of Peradeniya</p>
+          <h1 className={getAnimationClass('slideInUp', heroVisible)}>Contact Us</h1>
+          <p className={`${getAnimationClass('fadeInUp', heroVisible)} animate-delay-200`}>Get in touch with the Leo Society of University of Peradeniya</p>
         </div>
       </section>
 
@@ -54,10 +66,10 @@ function Contact() {
         <div className="container">
           <div className="contact-grid">
             {/* Contact Form */}
-            <div className="contact-form-section">
-              <h2>Send us a Message</h2>
+            <div className={`contact-form-section ${getAnimationClass('slideInLeft', formVisible)}`} ref={formRef}>
+              <h2 className={getAnimationClass('fadeInUp', formVisible)}>Send us a Message</h2>
               
-              <form className="contact-form" onSubmit={handleSubmit}>
+              <form className={`contact-form ${getAnimationClass('fadeInUp', formVisible)} animate-delay-200`} onSubmit={handleSubmit}>
                 <div className="form-group">
                   <label htmlFor="name">Full Name *</label>
                   <input
@@ -123,12 +135,12 @@ function Contact() {
             </div>
 
             {/* Contact Information */}
-            <div className="contact-info-section">
-              <h2>Contact Information</h2>
+            <div className={`contact-info-section ${getAnimationClass('slideInRight', formVisible)} animate-delay-400`}>
+              <h2 className={getAnimationClass('fadeInUp', formVisible)}>Contact Information</h2>
               
-              <div className="contact-info-list">
+              <div className="contact-info-list" ref={contactRef}>
                 {contactInfo.map((info, index) => (
-                  <div key={index} className="contact-info-item">
+                  <div key={index} className={`contact-info-item card-animation ${contactVisible.has(index) ? 'animate-visible' : 'animate-hidden'}`}>
                     <h3>{info.title}</h3>
                     <p className="contact-detail">{info.details}</p>
                   </div>

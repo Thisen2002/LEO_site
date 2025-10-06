@@ -28,6 +28,8 @@ function Navbar() {
 
   const closeMenu = () => {
     setIsMenuOpen(false)
+    // Scroll to top when navigating to a new page
+    window.scrollTo(0, 0)
   }
 
   const isActive = (path) => {
@@ -71,14 +73,14 @@ function Navbar() {
                 <Link 
                   to="/team/executive" 
                   className="dropdown-item" 
-                  onClick={() => { closeMenu(); closeTeamDropdown(); }}
+                  onClick={() => { closeMenu(); closeTeamDropdown(); window.scrollTo(0, 0); }}
                 >
                   Executive Board
                 </Link>
                 <Link 
                   to="/team/avenue-directors" 
                   className="dropdown-item" 
-                  onClick={() => { closeMenu(); closeTeamDropdown(); }}
+                  onClick={() => { closeMenu(); closeTeamDropdown(); window.scrollTo(0, 0); }}
                 >
                   Avenue Directors
                 </Link>
@@ -88,7 +90,9 @@ function Navbar() {
           
           <Link to="/gallery" className={`nav-link ${isActive('/gallery') ? 'active' : ''}`} onClick={closeMenu}>Gallery</Link>
           <Link to="/contact" className={`nav-link ${isActive('/contact') ? 'active' : ''}`} onClick={closeMenu}>Contact</Link>
-          <button className="nav-cta-button">Join Us</button>
+          <button className="nav-cta-button" onClick={() => window.open('https://forms.gle/VZokFgZajSyLVbyd8', '_blank')}>
+  Join Us
+</button>
         </div>
         
         <div className="nav-toggle" onClick={toggleMenu}>
