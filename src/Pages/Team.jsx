@@ -123,11 +123,13 @@ function Team() {
     }, []);
 
     return (
+      
+      
       <section className="avenue-directors-section" ref={headerRef}>
         <div className="container">
-          <div className={`section-header ${getAnimationClass('fadeInUp', headerVisible)}`}>
-            <h2 className={getAnimationClass('slideInUp', headerVisible)}>Avenue Directors</h2>
-            <p className={`${getAnimationClass('fadeInUp', headerVisible)} animate-delay-200`}>Dedicated leaders driving positive change across different avenues of service.</p>
+          <div className="section-header">
+            <h2>Avenue Directors</h2>
+            <p>Dedicated leaders driving positive change across different avenues of service.</p>
           </div>
           
           <div className="team-grid avenue-grid-flat" ref={avenueRef}>
