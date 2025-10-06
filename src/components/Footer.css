@@ -34,14 +34,17 @@
 }
 
 .brand-text {
-  font-size: 1.25rem;
-  font-weight: 700;
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-normal);
   color: #ffffff;
 }
 
 .brand-tagline {
   color: #94a3b8;
-  font-size: 0.875rem;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-normal);
   margin: 0;
   max-width: 240px;
 }
@@ -54,8 +57,9 @@
 .footer-nav .nav-link {
   color: #cbd5e1;
   text-decoration: none;
-  font-size: 0.875rem;
-  font-weight: 500;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-normal);
   transition: color 0.2s ease;
 }
 
@@ -101,13 +105,16 @@
 
 .copyright {
   color: #64748b;
-  font-size: 0.8rem;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-normal);
 }
 
 .affiliation {
   color: #fbbf24;
-  font-size: 0.8rem;
-  font-weight: 500;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-normal);
 }
 
 /* Responsive Design */

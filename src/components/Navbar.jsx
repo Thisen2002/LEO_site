@@ -48,8 +48,8 @@ function Navbar() {
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="nav-container">
         <div className="nav-brand">
-          <img src="/leo-logo-black-and-white.png" alt="Leo Logo" className="nav-logo" />
-          <span className="nav-title">Leo Society UOP</span>
+          <img src="/Leo_UoP.png" alt="Leo Logo" className="nav-logo" />
+          <span className="nav-title">Leo club of University of Peradeniya</span>
         </div>
         
         <div className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>

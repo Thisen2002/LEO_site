@@ -8,6 +8,14 @@ import {
   getAnimationClass,
   ANIMATION_CONFIGS
 } from '../utils/scrollAnimations'
+import '../utils/scrollAnimations.css'
+import { 
+  useScrollAnimation, 
+  useStaggerAnimation, 
+  useCounterAnimation,
+  getAnimationClass,
+  ANIMATION_CONFIGS
+} from '../utils/scrollAnimations'
 
 // Import hero section images
 import img1 from '/Pic/hero_section/IMG-1.jpg'
@@ -26,10 +34,10 @@ function Homepage() {
   const [activitiesRef, activitiesVisible] = useStaggerAnimation(4, 150);
   
   // Counter animations for stats
-  const [statsRef1, count1] = useCounterAnimation(150, 2000);
+  const [statsRef1, count1] = useCounterAnimation(200, 2000);
   const [statsRef2, count2] = useCounterAnimation(50, 2000);
   const [statsRef3, count3] = useCounterAnimation(10000, 2500);
-  const [statsRef4, count4] = useCounterAnimation(15, 1500);
+  const [statsRef4, count4] = useCounterAnimation(3, 1500);
   
   const [ctaRef, ctaVisible] = useScrollAnimation(ANIMATION_CONFIGS.section);
 
@@ -48,6 +56,7 @@ function Homepage() {
     <div className="homepage">
       {/* Hero Section */}
       <section className="hero-section" ref={heroRef}>
+      <section className="hero-section" ref={heroRef}>
         <div 
           className="hero-background"
           style={{
@@ -57,12 +66,12 @@ function Homepage() {
         <div className="hero-overlay"></div>
         <div className={`hero-content ${getAnimationClass('fadeInUp', heroVisible)}`}>
           <img 
-            src="/leo-logo-black-and-white.png" 
+            src="/Leo_UoP.png" 
             alt="Leo Society Logo" 
             className={`logo ${getAnimationClass('scaleIn', heroVisible)} animate-delay-200`}
           />
           <h1 className={`${getAnimationClass('slideInUp', heroVisible)} animate-delay-400`}>
-            Leo Society
+            Leo club
           </h1>
           <h2 className={`${getAnimationClass('slideInUp', heroVisible)} animate-delay-600`}>
             University of Peradeniya
@@ -81,7 +90,12 @@ function Homepage() {
 
       {/* About Section */}
       <section className="about-section" ref={aboutRef}>
+      <section className="about-section" ref={aboutRef}>
         <div className="container">
+          <h2 className={getAnimationClass('slideInLeft', aboutVisible)}>
+            Who We Are
+          </h2>
+          <p className={`${getAnimationClass('fadeInUp', aboutVisible)} animate-delay-200`}>
           <h2 className={getAnimationClass('slideInLeft', aboutVisible)}>
             Who We Are
           </h2>
@@ -95,8 +109,12 @@ function Homepage() {
 
       {/* Mission & Vision */}
       <section className="mission-vision" ref={missionRef}>
+      <section className="mission-vision" ref={missionRef}>
         <div className="container">
           <div className="mv-grid">
+            <div className={`mission ${getAnimationClass('slideInLeft', missionVisible)}`}>
+              <h3 className={getAnimationClass('fadeInUp', missionVisible)}>Our Mission</h3>
+              <p className={`${getAnimationClass('fadeInUp', missionVisible)} animate-delay-200`}>
             <div className={`mission ${getAnimationClass('slideInLeft', missionVisible)}`}>
               <h3 className={getAnimationClass('fadeInUp', missionVisible)}>Our Mission</h3>
               <p className={`${getAnimationClass('fadeInUp', missionVisible)} animate-delay-200`}>
@@ -105,6 +123,9 @@ function Homepage() {
                 local, national and international community.
               </p>
             </div>
+            <div className={`vision ${getAnimationClass('slideInRight', missionVisible)} animate-delay-300`}>
+              <h3 className={`${getAnimationClass('fadeInUp', missionVisible)} animate-delay-400`}>Our Vision</h3>
+              <p className={`${getAnimationClass('fadeInUp', missionVisible)} animate-delay-500`}>
             <div className={`vision ${getAnimationClass('slideInRight', missionVisible)} animate-delay-300`}>
               <h3 className={`${getAnimationClass('fadeInUp', missionVisible)} animate-delay-400`}>Our Vision</h3>
               <p className={`${getAnimationClass('fadeInUp', missionVisible)} animate-delay-500`}>
@@ -119,26 +140,34 @@ function Homepage() {
 
       {/* Activities Section */}
       <section className="activities-section" ref={activitiesRef}>
+      <section className="activities-section" ref={activitiesRef}>
         <div className="container">
           <h2 className={getAnimationClass('slideInUp', activitiesVisible.size > 0)}>
             What We Do
           </h2>
+          <h2 className={getAnimationClass('slideInUp', activitiesVisible.size > 0)}>
+            What We Do
+          </h2>
           <div className="activities-grid">
+            <div className={`activity-card card-animation ${activitiesVisible.has(0) ? 'animate-visible' : 'animate-hidden'}`}>
             <div className={`activity-card card-animation ${activitiesVisible.has(0) ? 'animate-visible' : 'animate-hidden'}`}>
               <div className="icon">🎓</div>
               <h3>Education</h3>
               <p>Supporting education initiatives and scholarship programs for underprivileged students</p>
             </div>
             <div className={`activity-card card-animation ${activitiesVisible.has(1) ? 'animate-visible' : 'animate-hidden'}`}>
+            <div className={`activity-card card-animation ${activitiesVisible.has(1) ? 'animate-visible' : 'animate-hidden'}`}>
               <div className="icon">🌱</div>
               <h3>Environment</h3>
               <p>Organizing tree planting campaigns and environmental conservation projects</p>
             </div>
             <div className={`activity-card card-animation ${activitiesVisible.has(2) ? 'animate-visible' : 'animate-hidden'}`}>
+            <div className={`activity-card card-animation ${activitiesVisible.has(2) ? 'animate-visible' : 'animate-hidden'}`}>
               <div className="icon">❤️</div>
               <h3>Community Service</h3>
               <p>Conducting blood donation camps, health clinics, and community development programs</p>
             </div>
+            <div className={`activity-card card-animation ${activitiesVisible.has(3) ? 'animate-visible' : 'animate-hidden'}`}>
             <div className={`activity-card card-animation ${activitiesVisible.has(3) ? 'animate-visible' : 'animate-hidden'}`}>
               <div className="icon">🤝</div>
               <h3>Leadership</h3>
@@ -154,16 +183,24 @@ function Homepage() {
           <div className="stats-grid">
             <div className={`stat ${getAnimationClass('scaleIn', count1 > 0)}`} ref={statsRef1}>
               <h3 className="stats-counter">{count1}+</h3>
+            <div className={`stat ${getAnimationClass('scaleIn', count1 > 0)}`} ref={statsRef1}>
+              <h3 className="stats-counter">{count1}+</h3>
               <p>Active Members</p>
             </div>
+            <div className={`stat ${getAnimationClass('scaleIn', count2 > 0)} animate-delay-200`} ref={statsRef2}>
+              <h3 className="stats-counter">{count2}+</h3>
             <div className={`stat ${getAnimationClass('scaleIn', count2 > 0)} animate-delay-200`} ref={statsRef2}>
               <h3 className="stats-counter">{count2}+</h3>
               <p>Projects Completed</p>
             </div>
             <div className={`stat ${getAnimationClass('scaleIn', count3 > 0)} animate-delay-400`} ref={statsRef3}>
               <h3 className="stats-counter">{count3.toLocaleString()}+</h3>
+            <div className={`stat ${getAnimationClass('scaleIn', count3 > 0)} animate-delay-400`} ref={statsRef3}>
+              <h3 className="stats-counter">{count3.toLocaleString()}+</h3>
               <p>Lives Impacted</p>
             </div>
+            <div className={`stat ${getAnimationClass('scaleIn', count4 > 0)} animate-delay-600`} ref={statsRef4}>
+              <h3 className="stats-counter">{count4}+</h3>
             <div className={`stat ${getAnimationClass('scaleIn', count4 > 0)} animate-delay-600`} ref={statsRef4}>
               <h3 className="stats-counter">{count4}+</h3>
               <p>Years of Service</p>
@@ -174,6 +211,7 @@ function Homepage() {
 
       {/* Call to Action */}
       <section className="cta-section" ref={ctaRef}>
+      <section className="cta-section" ref={ctaRef}>
         <div className="container">
           <h2 className={getAnimationClass('slideInUp', ctaVisible)}>
             Ready to Make a Difference?
@@ -181,7 +219,19 @@ function Homepage() {
           <p className={`${getAnimationClass('fadeInUp', ctaVisible)} animate-delay-200`}>
             Join us in our mission to serve the community and develop leadership skills
           </p>
+          <h2 className={getAnimationClass('slideInUp', ctaVisible)}>
+            Ready to Make a Difference?
+          </h2>
+          <p className={`${getAnimationClass('fadeInUp', ctaVisible)} animate-delay-200`}>
+            Join us in our mission to serve the community and develop leadership skills
+          </p>
           <div className="cta-buttons">
+            <button className={`primary-button button-animation ${ctaVisible ? 'animate-visible' : 'animate-hidden'} animate-delay-400`}>
+              Become a Member
+            </button>
+            <button className={`secondary-button button-animation ${ctaVisible ? 'animate-visible' : 'animate-hidden'} animate-delay-600`}>
+              Contact Us
+            </button>
             <button className={`primary-button button-animation ${ctaVisible ? 'animate-visible' : 'animate-hidden'} animate-delay-400`}>
               Become a Member
             </button>

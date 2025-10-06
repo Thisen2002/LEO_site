@@ -18,19 +18,24 @@
 .eyebrow {
   text-transform: uppercase;
   letter-spacing: 0.15em;
-  font-weight: 700;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-normal);
   color: #ffd700;
   margin-bottom: 10px;
-  font-size: 0.9rem;
 }
 .about-hero h1 {
-  font-size: 3rem;
+  font-size: var(--font-size-5xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
   margin-bottom: 12px;
 }
 .subtitle {
   max-width: 800px;
   margin: 0 auto;
-  font-size: 1.1rem;
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-relaxed);
   opacity: 0.95;
 }
 

@@ -148,7 +148,7 @@ function About() {
         {/* Why Join Section */}
         <section className="why-join-section">
           <div className="container">
-            <h2>Why Join Leo Society UOP?</h2>
+            <h2>Why Join Leo club of University of Peradeniya?</h2>
             <div className="benefits-grid">
               <div className="benefit-card">
                 {/* <div className="benefit-icon">🎯</div> */}

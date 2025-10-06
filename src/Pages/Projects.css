@@ -97,9 +97,10 @@
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fill, 350px);
   gap: 2rem;
   margin-top: 2rem;
+  justify-content: center;
 }
 
 .project-card {
@@ -109,6 +110,11 @@
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
   position: relative;
+  width: 350px;
+  height: auto;
+  min-height: 520px;
+  display: flex;
+  flex-direction: column;
 }
 
 .project-card:hover {
@@ -162,6 +168,9 @@
 
 .project-content {
   padding: 2rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .project-category {
@@ -189,12 +198,14 @@
   color: #4a5568;
   line-height: 1.6;
   margin-bottom: 1.5rem;
+  flex: 1;
 }
 
 .project-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: auto;
 }
 
 .impact {
@@ -288,6 +299,12 @@
   .projects-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+    justify-items: center;
+  }
+  
+  .project-card {
+    width: 100%;
+    max-width: 350px;
   }
   
   .projects-filter-section {
