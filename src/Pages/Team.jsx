@@ -1,6 +1,13 @@
 import React, { useEffect } from 'react'
 import { useParams, useLocation } from 'react-router-dom'
 import './Team.css'
+import '../utils/scrollAnimations.css'
+import { 
+  useScrollAnimation, 
+  useStaggerAnimation,
+  getAnimationClass,
+  ANIMATION_CONFIGS
+} from '../utils/scrollAnimations'
 import executiveBoard from '../json files/executiveBoard.json'
 import avenuedirectors from '../json files/avenuedirectors.json'
 
@@ -18,22 +25,28 @@ function Team() {
   
   const currentTeamType = getTeamType()
   
+  // Animation hooks
+  const [headerRef, headerVisible] = useScrollAnimation(ANIMATION_CONFIGS.hero);
+  const [leadershipRef, leadershipVisible] = useStaggerAnimation(2, 200);
+  const [executiveRef, executiveVisible] = useStaggerAnimation(executiveBoard.filter(m => !['President', 'Past President'].includes(m.position)).length, 100);
+  const [avenueRef, avenueVisible] = useStaggerAnimation(avenuedirectors.length, 100);
+  
   // Render Executive Board
   const renderExecutiveBoard = () => (
-    <section className="executive-section">
+    <section className="executive-section" ref={headerRef}>
       <div className="container">
-        <div className="section-header">
-          <h2>Executive Board</h2>
-          <p>Our leadership team committed to serving with excellence and integrity.</p>
+        <div className={`section-header ${getAnimationClass('fadeInUp', headerVisible)}`}>
+          <h2 className={getAnimationClass('slideInUp', headerVisible)}>Executive Board</h2>
+          <p className={`${getAnimationClass('fadeInUp', headerVisible)} animate-delay-200`}>Our leadership team committed to serving with excellence and integrity.</p>
         </div>
         
         {/* Leadership Row - President and Past President */}
-        <div className="leadership-section">
+        <div className="leadership-section" ref={leadershipRef}>
           <div className="team-grid leadership-grid">
             {executiveBoard
               .filter(member => member.position === 'President' || member.position === 'Past President')
-              .map(member => (
-                <div key={member.id} className="member-card executive-card leadership-card">
+              .map((member, index) => (
+                <div key={member.id} className={`member-card executive-card leadership-card team-member-animation ${leadershipVisible.has(index) ? 'animate-visible' : 'animate-hidden'}`}>
                   <div className="member-image">
                     <img src={member.image} alt={member.name} />
                     <div className="member-overlay">
@@ -62,12 +75,12 @@ function Team() {
         </div>
 
         {/* Other Executive Members - 3 per row */}
-        <div className="other-members-section">
+        <div className="other-members-section" ref={executiveRef}>
           <div className="team-grid executive-grid three-column">
             {executiveBoard
               .filter(member => member.position !== 'President' && member.position !== 'Past President')
-              .map(member => (
-                <div key={member.id} className="member-card executive-card">
+              .map((member, index) => (
+                <div key={member.id} className={`member-card executive-card team-member-animation ${executiveVisible.has(index) ? 'animate-visible' : 'animate-hidden'}`}>
                   <div className="member-image">
                     <img src={member.image} alt={member.name} />
                     <div className="member-overlay">
@@ -110,16 +123,16 @@ function Team() {
     }, []);
 
     return (
-      <section className="avenue-directors-section">
+      <section className="avenue-directors-section" ref={headerRef}>
         <div className="container">
-          <div className="section-header">
-            <h2>Avenue Directors</h2>
-            <p>Dedicated leaders driving positive change across different avenues of service.</p>
+          <div className={`section-header ${getAnimationClass('fadeInUp', headerVisible)}`}>
+            <h2 className={getAnimationClass('slideInUp', headerVisible)}>Avenue Directors</h2>
+            <p className={`${getAnimationClass('fadeInUp', headerVisible)} animate-delay-200`}>Dedicated leaders driving positive change across different avenues of service.</p>
           </div>
           
-          <div className="team-grid avenue-grid-flat">
+          <div className="team-grid avenue-grid-flat" ref={avenueRef}>
             {allMembers.map((member, memberIndex) => (
-              <div key={memberIndex} className="member-card avenue-card">
+              <div key={memberIndex} className={`member-card avenue-card team-member-animation ${avenueVisible.has(memberIndex) ? 'animate-visible' : 'animate-hidden'}`}>
                 <div className="member-image">
                   <img 
                     src={member.image} 

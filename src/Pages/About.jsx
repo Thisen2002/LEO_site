@@ -1,15 +1,37 @@
 import { useEffect } from 'react'
 import './About.css'
+import '../utils/scrollAnimations.css'
+import { 
+  useScrollAnimation, 
+  useStaggerAnimation, 
+  useCounterAnimation,
+  getAnimationClass,
+  ANIMATION_CONFIGS
+} from '../utils/scrollAnimations'
 
 function About() {
+  // Animation hooks
+  const [heroRef, heroVisible] = useScrollAnimation(ANIMATION_CONFIGS.hero);
+  const [storyRef, storyVisible] = useScrollAnimation(ANIMATION_CONFIGS.section);
+  const [valuesRef, valuesVisible] = useStaggerAnimation(3, 200);
+  const [internationalRef, internationalVisible] = useScrollAnimation(ANIMATION_CONFIGS.section);
+  
+  // Counter animations for stats
+  const [statsRef1, count1] = useCounterAnimation(150, 2000);
+  const [statsRef2, count2] = useCounterAnimation(50, 2000);
+  const [statsRef3, count3] = useCounterAnimation(10000, 2500);
 
   return (
     <div className="about-page">
-      <header className="about-hero">
+      <header className="about-hero" ref={heroRef}>
         <div className="container">
-          <p className="eyebrow">About Us</p>
-          <h1>Leadership. Experience. Opportunity.</h1>
-          <p className="subtitle">
+          <p className={`eyebrow ${getAnimationClass('fadeInUp', heroVisible)}`}>
+            About Us
+          </p>
+          <h1 className={`${getAnimationClass('slideInUp', heroVisible)} animate-delay-200`}>
+            Leadership. Experience. Opportunity.
+          </h1>
+          <p className={`subtitle ${getAnimationClass('fadeInUp', heroVisible)} animate-delay-400`}>
             The Leo Society of the University of Peradeniya is a student-led community of young leaders
             dedicated to service, personal growth, and positive impact—on campus and beyond.
           </p>
@@ -18,17 +40,17 @@ function About() {
 
       <main>
         {/* Our Story */}
-        <section className="story-section">
+        <section className="story-section" ref={storyRef}>
           <div className="container story-grid">
-            <div className="story-text">
-              <h2>Our Story</h2>
-              <p>
+            <div className={`story-text ${getAnimationClass('slideInLeft', storyVisible)}`}>
+              <h2 className={getAnimationClass('fadeInUp', storyVisible)}>Our Story</h2>
+              <p className={`${getAnimationClass('fadeInUp', storyVisible)} animate-delay-200`}>
                 We are part of the global Leo movement—young people creating meaningful change through
                 volunteerism and leadership development. At Peradeniya, our projects span education,
                 environment, health, and community development, giving members hands-on experience to lead,
                 collaborate, and serve.
               </p>
-              <ul className="highlights">
+              <ul className={`highlights ${getAnimationClass('fadeInUp', storyVisible)} animate-delay-400`}>
                 <li>Community service projects with real impact</li>
                 <li>Leadership and soft-skill development</li>
                 <li>Networking across universities and districts</li>
@@ -36,43 +58,47 @@ function About() {
               </ul>
             </div>
 
-            <div className="impact-card">
-              <h3>At a Glance</h3>
+            <div className={`impact-card ${getAnimationClass('slideInRight', storyVisible)} animate-delay-300`}>
+              <h3 className={getAnimationClass('fadeInUp', storyVisible)}>At a Glance</h3>
               <div className="impact-stats">
-                <div className="impact-item">
-                  <span className="number">150+</span>
+                <div className={`impact-item ${getAnimationClass('scaleIn', count1 > 0)}`} ref={statsRef1}>
+                  <span className="number stats-counter">{count1}+</span>
                   <span className="label">Active Members</span>
                 </div>
-                <div className="impact-item">
-                  <span className="number">50+</span>
+                <div className={`impact-item ${getAnimationClass('scaleIn', count2 > 0)} animate-delay-200`} ref={statsRef2}>
+                  <span className="number stats-counter">{count2}+</span>
                   <span className="label">Projects / Year</span>
                 </div>
-                <div className="impact-item">
-                  <span className="number">10k+</span>
+                <div className={`impact-item ${getAnimationClass('scaleIn', count3 > 0)} animate-delay-400`} ref={statsRef3}>
+                  <span className="number stats-counter">{count3 > 1000 ? `${Math.floor(count3/1000)}k` : count3}+</span>
                   <span className="label">Lives Reached</span>
                 </div>
               </div>
-              <p className="mini-note">Numbers are indicative — update with your latest stats.</p>
+              <p className={`mini-note ${getAnimationClass('fadeInUp', storyVisible)} animate-delay-600`}>
+                Numbers are indicative — update with your latest stats.
+              </p>
             </div>
           </div>
         </section>
 
         {/* Values */}
-        <section className="values-section">
+        <section className="values-section" ref={valuesRef}>
           <div className="container">
-            <h2>What We Stand For</h2>
+            <h2 className={getAnimationClass('slideInUp', valuesVisible.size > 0)}>
+              What We Stand For
+            </h2>
             <div className="values-grid">
-              <div className="value-card">
+              <div className={`value-card card-animation ${valuesVisible.has(0) ? 'animate-visible' : 'animate-hidden'}`}>
                 <div className="icon">🦁</div>
                 <h3>Leadership</h3>
                 <p>We empower students to lead with empathy, initiative, and integrity.</p>
               </div>
-              <div className="value-card">
+              <div className={`value-card card-animation ${valuesVisible.has(1) ? 'animate-visible' : 'animate-hidden'}`}>
                 <div className="icon">✨</div>
                 <h3>Experience</h3>
                 <p>Hands-on service and projects that build real-world skills.</p>
               </div>
-              <div className="value-card">
+              <div className={`value-card card-animation ${valuesVisible.has(2) ? 'animate-visible' : 'animate-hidden'}`}>
                 <div className="icon">🚀</div>
                 <h3>Opportunity</h3>
                 <p>Grow your network, explore roles, and make a difference together.</p>
@@ -82,16 +108,18 @@ function About() {
         </section>
 
         {/* Leo International Connection */}
-        <section className="leo-international-section">
+        <section className="leo-international-section" ref={internationalRef}>
           <div className="container">
             <div className="international-grid">
-              <div className="international-content">
-                <h2>Part of Something Bigger</h2>
-                <p>
+              <div className={`international-content ${getAnimationClass('slideInLeft', internationalVisible)}`}>
+                <h2 className={getAnimationClass('fadeInUp', internationalVisible)}>
+                  Part of Something Bigger
+                </h2>
+                <p className={`${getAnimationClass('fadeInUp', internationalVisible)} animate-delay-200`}>
                   As a Leo Club, we're part of Leo Clubs International, associated with Lions Clubs International - 
                   the world's largest service club organization. This connection gives our members access to:
                 </p>
-                <ul className="benefits-list">
+                <ul className={`benefits-list ${getAnimationClass('fadeInUp', internationalVisible)} animate-delay-400`}>
                   <li>Global network of young leaders</li>
                   <li>International service opportunities</li>
                   <li>Leadership development programs</li>

@@ -1,9 +1,21 @@
 import React, { useState } from 'react'
 import './Projects.css'
+import '../utils/scrollAnimations.css'
+import { 
+  useScrollAnimation, 
+  useStaggerAnimation,
+  getAnimationClass,
+  ANIMATION_CONFIGS
+} from '../utils/scrollAnimations'
 import projects from '../json files/Projects.json'
 
 function Projects() {
   const [statusFilter, setStatusFilter] = useState('All')
+  
+  // Animation hooks
+  const [heroRef, heroVisible] = useScrollAnimation(ANIMATION_CONFIGS.hero);
+  const [filterRef, filterVisible] = useScrollAnimation(ANIMATION_CONFIGS.section);
+  const [projectsRef, projectsVisible] = useStaggerAnimation(projects.length, 100);
   
   const getStatusBadgeClass = (status) => {
     switch (status) {
@@ -28,11 +40,11 @@ function Projects() {
 
   return (
     <div className="projects-page">
-      <header className="projects-hero">
+      <header className="projects-hero" ref={heroRef}>
         <div className="container">
-          <p className="eyebrow">Our Impact</p>
-          <h1>Projects & Initiatives</h1>
-          <p className="subtitle">
+          <p className={`eyebrow ${getAnimationClass('fadeInUp', heroVisible)}`}>Our Impact</p>
+          <h1 className={`${getAnimationClass('slideInUp', heroVisible)} animate-delay-200`}>Projects & Initiatives</h1>
+          <p className={`subtitle ${getAnimationClass('fadeInUp', heroVisible)} animate-delay-400`}>
             Discover how we're making a difference in our community through meaningful projects 
             that create lasting positive change.
           </p>
@@ -42,13 +54,14 @@ function Projects() {
       <main>
         <section className="projects-grid-section">
 
-          <div className="container">
-            <div className="filter-controls">
+          <div className="container" ref={filterRef}>
+            <div className={`filter-controls ${getAnimationClass('slideInUp', filterVisible)}`}>
               <div className="filter-buttons">
-                {statusOptions.map(status => (
+                {statusOptions.map((status, index) => (
                   <button
                     key={status}
-                    className={`filter-btn ${statusFilter === status ? 'active' : ''}`}
+                    className={`filter-btn ${statusFilter === status ? 'active' : ''} button-animation ${filterVisible ? 'animate-visible' : 'animate-hidden'}`}
+                    style={{ transitionDelay: `${index * 100}ms` }}
                     onClick={() => handleStatusFilter(status)}
                   >
                     {status}
@@ -58,10 +71,10 @@ function Projects() {
             </div>
           </div>
 
-          <div className="container">
+          <div className="container" ref={projectsRef}>
             <div className="projects-grid">
-              {filteredProjects.map(project => (
-                <div key={project.id} className="project-card">
+              {filteredProjects.map((project, index) => (
+                <div key={project.id} className={`project-card project-card-animation ${projectsVisible.has(index) ? 'animate-visible' : 'animate-hidden'}`}>
                   <div className="project-image">
                     <img src={project.image} alt={project.title} />
                     <div className={`status-badge ${getStatusBadgeClass(project.status)}`}>

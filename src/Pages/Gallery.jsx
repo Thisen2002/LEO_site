@@ -1,14 +1,22 @@
 import React, { useEffect, useState } from 'react'
 import './Gallery.css'
+import '../utils/scrollAnimations.css'
+import { 
+  useScrollAnimation, 
+  useStaggerAnimation,
+  getAnimationClass,
+  ANIMATION_CONFIGS
+} from '../utils/scrollAnimations'
 import galleryItems from '../json files/gallery.json'
 
 function Gallery() {
   const [activeCategory, setActiveCategory] = useState('all')
   const [selectedImage, setSelectedImage] = useState(null)
 
-  // const galleryItems = [
-    
-  // ]
+  // Animation hooks
+  const [heroRef, heroVisible] = useScrollAnimation(ANIMATION_CONFIGS.hero);
+  const [filterRef, filterVisible] = useScrollAnimation(ANIMATION_CONFIGS.section);
+  const [galleryRef, galleryVisible] = useStaggerAnimation(galleryItems.length, 50);
 
   const categories = [
     { id: 'all', name: 'All Photos', count: galleryItems.length },
@@ -43,11 +51,11 @@ function Gallery() {
 
   return (
     <div className="gallery-page">
-      <header className="gallery-hero">
+      <header className="gallery-hero" ref={heroRef}>
         <div className="container">
-          <p className="eyebrow">Our Memories</p>
-          <h1>Photo Gallery</h1>
-          <p className="subtitle">
+          <p className={`eyebrow ${getAnimationClass('fadeInUp', heroVisible)}`}>Our Memories</p>
+          <h1 className={`${getAnimationClass('slideInUp', heroVisible)} animate-delay-200`}>Photo Gallery</h1>
+          <p className={`subtitle ${getAnimationClass('fadeInUp', heroVisible)} animate-delay-400`}>
             Explore moments from our events, projects, and community activities. 
             Each photo tells a story of service, friendship, and positive impact.
           </p>
@@ -58,11 +66,12 @@ function Gallery() {
         <section className="gallery-content">
           <div className="container">
             {/* Category Filter */}
-            <div className="category-filter">
-              {categories.map(category => (
+            <div className={`category-filter ${getAnimationClass('slideInUp', filterVisible)}`} ref={filterRef}>
+              {categories.map((category, index) => (
                 <button
                   key={category.id}
-                  className={`filter-btn ${activeCategory === category.id ? 'active' : ''}`}
+                  className={`filter-btn ${activeCategory === category.id ? 'active' : ''} button-animation ${filterVisible ? 'animate-visible' : 'animate-hidden'}`}
+                  style={{ transitionDelay: `${index * 100}ms` }}
                   onClick={() => setActiveCategory(category.id)}
                 >
                   {category.name} ({category.count})
@@ -71,11 +80,11 @@ function Gallery() {
             </div>
 
             {/* Gallery Grid */}
-            <div className="gallery-grid">
-              {filteredItems.map(item => (
+            <div className="gallery-grid" ref={galleryRef}>
+              {filteredItems.map((item, index) => (
                 <div 
                   key={item.id} 
-                  className="gallery-item"
+                  className={`gallery-item gallery-item-animation ${galleryVisible.has(index) ? 'animate-visible' : 'animate-hidden'}`}
                   onClick={() => openLightbox(item)}
                 >
                   <div className="gallery-image">

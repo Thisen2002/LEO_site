@@ -10,7 +10,7 @@ function Footer() {
       <div className="container">
         <div className="footer-top">
           <div className="footer-brand">
-            <Link to="/" className="brand-link">
+            <Link to="/" className="brand-link" onClick={() => window.scrollTo(0, 0)}>
               <img src="/leo-logo-black-and-white.png" alt="Leo" className="footer-logo" />
               <span className="brand-text">Leo Society UOP</span>
             </Link>
@@ -18,11 +18,11 @@ function Footer() {
           </div>
           
           <nav className="footer-nav">
-            <Link to="/about" className="nav-link">About</Link>
-            <Link to="/projects" className="nav-link">Projects</Link>
-            <Link to="/team" className="nav-link">Team</Link>
-            <Link to="/gallery" className="nav-link">Gallery</Link>
-            <Link to="/contact" className="nav-link">Contact</Link>
+            <Link to="/about" className="nav-link" onClick={() => window.scrollTo(0, 0)}>About</Link>
+            <Link to="/projects" className="nav-link" onClick={() => window.scrollTo(0, 0)}>Projects</Link>
+            <Link to="/team" className="nav-link" onClick={() => window.scrollTo(0, 0)}>Team</Link>
+            <Link to="/gallery" className="nav-link" onClick={() => window.scrollTo(0, 0)}>Gallery</Link>
+            <Link to="/contact" className="nav-link" onClick={() => window.scrollTo(0, 0)}>Contact</Link>
           </nav>
           
           <div className="footer-social">

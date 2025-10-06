@@ -6,6 +6,7 @@ function Notfound() {
   const navigate = useNavigate(); // Remove this line if not using React Router
 
   const handleGoHome = () => {
+    window.scrollTo(0, 0); // Scroll to top before navigation
     navigate("/"); // Or use window.location.href = '/' if not using React Router
   };
 
@@ -31,7 +32,7 @@ function Notfound() {
           </button>
           <button
             className="contact-button"
-            onClick={() => navigate("/contact")}
+            onClick={() => { window.scrollTo(0, 0); navigate("/contact"); }}
           >
             Contact Us
           </button>

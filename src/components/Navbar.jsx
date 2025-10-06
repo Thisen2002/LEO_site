@@ -28,6 +28,8 @@ function Navbar() {
 
   const closeMenu = () => {
     setIsMenuOpen(false)
+    // Scroll to top when navigating to a new page
+    window.scrollTo(0, 0)
   }
 
   const isActive = (path) => {
@@ -71,14 +73,14 @@ function Navbar() {
                 <Link 
                   to="/team/executive" 
                   className="dropdown-item" 
-                  onClick={() => { closeMenu(); closeTeamDropdown(); }}
+                  onClick={() => { closeMenu(); closeTeamDropdown(); window.scrollTo(0, 0); }}
                 >
                   Executive Board
                 </Link>
                 <Link 
                   to="/team/avenue-directors" 
                   className="dropdown-item" 
-                  onClick={() => { closeMenu(); closeTeamDropdown(); }}
+                  onClick={() => { closeMenu(); closeTeamDropdown(); window.scrollTo(0, 0); }}
                 >
                   Avenue Directors
                 </Link>
