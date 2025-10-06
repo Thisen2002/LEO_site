@@ -8,6 +8,13 @@ import {
   getAnimationClass,
   ANIMATION_CONFIGS
 } from '../utils/scrollAnimations'
+import '../utils/scrollAnimations.css'
+import { 
+  useScrollAnimation, 
+  useStaggerAnimation,
+  getAnimationClass,
+  ANIMATION_CONFIGS
+} from '../utils/scrollAnimations'
 import executiveBoard from '../json files/executiveBoard.json'
 import avenuedirectors from '../json files/avenuedirectors.json'
 
@@ -31,10 +38,20 @@ function Team() {
   const [executiveRef, executiveVisible] = useStaggerAnimation(executiveBoard.filter(m => !['President', 'Past President'].includes(m.position)).length, 100);
   const [avenueRef, avenueVisible] = useStaggerAnimation(avenuedirectors.length, 100);
   
+  // Animation hooks
+  const [headerRef, headerVisible] = useScrollAnimation(ANIMATION_CONFIGS.hero);
+  const [leadershipRef, leadershipVisible] = useStaggerAnimation(2, 200);
+  const [executiveRef, executiveVisible] = useStaggerAnimation(executiveBoard.filter(m => !['President', 'Past President'].includes(m.position)).length, 100);
+  const [avenueRef, avenueVisible] = useStaggerAnimation(avenuedirectors.length, 100);
+  
   // Render Executive Board
   const renderExecutiveBoard = () => (
     <section className="executive-section" ref={headerRef}>
+    <section className="executive-section" ref={headerRef}>
       <div className="container">
+        <div className={`section-header ${getAnimationClass('fadeInUp', headerVisible)}`}>
+          <h2 className={getAnimationClass('slideInUp', headerVisible)}>Executive Board</h2>
+          <p className={`${getAnimationClass('fadeInUp', headerVisible)} animate-delay-200`}>Our leadership team committed to serving with excellence and integrity.</p>
         <div className={`section-header ${getAnimationClass('fadeInUp', headerVisible)}`}>
           <h2 className={getAnimationClass('slideInUp', headerVisible)}>Executive Board</h2>
           <p className={`${getAnimationClass('fadeInUp', headerVisible)} animate-delay-200`}>Our leadership team committed to serving with excellence and integrity.</p>
@@ -42,9 +59,12 @@ function Team() {
         
         {/* Leadership Row - President and Past President */}
         <div className="leadership-section" ref={leadershipRef}>
+        <div className="leadership-section" ref={leadershipRef}>
           <div className="team-grid leadership-grid">
             {executiveBoard
               .filter(member => member.position === 'President' || member.position === 'Past President')
+              .map((member, index) => (
+                <div key={member.id} className={`member-card executive-card leadership-card team-member-animation ${leadershipVisible.has(index) ? 'animate-visible' : 'animate-hidden'}`}>
               .map((member, index) => (
                 <div key={member.id} className={`member-card executive-card leadership-card team-member-animation ${leadershipVisible.has(index) ? 'animate-visible' : 'animate-hidden'}`}>
                   <div className="member-image">
@@ -76,9 +96,12 @@ function Team() {
 
         {/* Other Executive Members - 3 per row */}
         <div className="other-members-section" ref={executiveRef}>
+        <div className="other-members-section" ref={executiveRef}>
           <div className="team-grid executive-grid three-column">
             {executiveBoard
               .filter(member => member.position !== 'President' && member.position !== 'Past President')
+              .map((member, index) => (
+                <div key={member.id} className={`member-card executive-card team-member-animation ${executiveVisible.has(index) ? 'animate-visible' : 'animate-hidden'}`}>
               .map((member, index) => (
                 <div key={member.id} className={`member-card executive-card team-member-animation ${executiveVisible.has(index) ? 'animate-visible' : 'animate-hidden'}`}>
                   <div className="member-image">
