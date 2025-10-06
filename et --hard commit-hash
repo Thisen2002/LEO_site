@@ -1,0 +1,193 @@
+[33mcommit 9cc4b4bede5e14dda4e7725409b8d1bb8969b37e[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mtype-change[m[33m, [m[1;31morigin/type-change[m[33m)[m
+Merge: a7a6168 f030a11
+Author: Thisen2002 <e21231@eng.pdn.ac.lk>
+Date:   Tue Oct 7 01:58:05 2025 +0530
+
+    Resolve merge conflict: keep current versions of Dunith.jpg and Sahan.jpg
+
+[33mcommit a7a616872896769b9b31768333850427382c4f28[m
+Author: Thisen2002 <e21231@eng.pdn.ac.lk>
+Date:   Tue Oct 7 01:45:32 2025 +0530
+
+    projects fix
+
+[33mcommit 34ca6aded6c616d29dae20fc1dab6ea53e0160bc[m
+Author: Thisen2002 <e21231@eng.pdn.ac.lk>
+Date:   Tue Oct 7 01:18:07 2025 +0530
+
+    removve some animation
+
+[33mcommit a7a8f85204e774895ff397077de5fa13e59b1dd2[m
+Author: Thisen2002 <e21231@eng.pdn.ac.lk>
+Date:   Tue Oct 7 00:38:34 2025 +0530
+
+    type set
+
+[33mcommit ab1aa1f8694d71adbe81b18d2820f8e7575cc92d[m
+Author: Thisen2002 <e21231@eng.pdn.ac.lk>
+Date:   Tue Oct 7 00:26:50 2025 +0530
+
+    small changes
+
+[33mcommit 817da05e0a6bfc9236286bc0cca827018f64ef31[m
+Author: Thisen2002 <e21231@eng.pdn.ac.lk>
+Date:   Mon Oct 6 23:51:48 2025 +0530
+
+    missing bod pic
+
+[33mcommit 9a8ed2e317229ca3fe2bfdff5c4b10c338f924e5[m
+Author: Thisen2002 <e21231@eng.pdn.ac.lk>
+Date:   Mon Oct 6 13:31:07 2025 +0530
+
+    pic update
+
+[33mcommit f030a1178eced488892c89029463cc1a333f381d[m
+Author: Thisen Lakdinu <e21231@eng.pdn.ac.lk>
+Date:   Mon Oct 6 13:07:38 2025 +0530
+
+    Change (#3)
+    
+    * Few changes
+    
+    * changers
+    
+    * animation part
+    
+    * fix mistakes
+
+[33mcommit 0cf7e702e9d3d7e3b70cbfe870e11bea6882342b[m
+Author: Thisen2002 <e21231@eng.pdn.ac.lk>
+Date:   Mon Oct 6 13:03:54 2025 +0530
+
+    fix mistakes
+
+[33mcommit f70c4018ac85c7fa7a28e2a7d62cc92cce7c674d[m
+Author: Thisen2002 <e21231@eng.pdn.ac.lk>
+Date:   Mon Oct 6 12:48:36 2025 +0530
+
+    animation part
+
+[33mcommit 9f62a1e1ba23a4e8485496f99e4aa12679f44752[m
+Author: Thisen2002 <e21231@eng.pdn.ac.lk>
+Date:   Mon Oct 6 12:24:11 2025 +0530
+
+    changers
+
+[33mcommit 769109843878d27b02fd3618a185f975676b29bd[m
+Author: Thisen Lakdinu <e21231@eng.pdn.ac.lk>
+Date:   Sun Oct 5 19:23:00 2025 +0530
+
+    Merge pull request #2 from Thisen2002/arangement
+    
+    Few changes
+
+[33mcommit 1bc01fb589c68decb3b02b5f7ce7a458f53f4091[m
+Author: Thisen2002 <e21231@eng.pdn.ac.lk>
+Date:   Sun Oct 5 19:14:55 2025 +0530
+
+    Few changes
+
+[33mcommit 5a4592dde75bdb2a7f967b5a2ab0558fd23b7dd6[m
+Author: Thisen2002 <e21231@eng.pdn.ac.lk>
+Date:   Sun Oct 5 18:26:36 2025 +0530
+
+    he he
+
+[33mcommit 6c7a9a95659338ad3ad56f73d1443c49de66bdbf[m
+Author: Thisen2002 <e21231@eng.pdn.ac.lk>
+Date:   Sun Oct 5 18:22:46 2025 +0530
+
+    leo logo location change
+
+[33mcommit 58d3b5ad397d35ea2b3f6ffba7a4c36eb1ecef2c[m
+Author: Thisen2002 <e21231@eng.pdn.ac.lk>
+Date:   Sun Oct 5 18:10:34 2025 +0530
+
+    location change
+
+[33mcommit 307a3a861ede22742af7e1b4650addbba7ae5cf2[m
+Merge: 2609f09 4593d99
+Author: Thisen Lakdinu <e21231@eng.pdn.ac.lk>
+Date:   Sun Oct 5 17:43:27 2025 +0530
+
+    Merge pull request #1 from Thisen2002/changing
+    
+    Changing
+
+[33mcommit 4593d9925984a51feda8ba9ef2c922a3a10d2944[m
+Author: Thisen2002 <e21231@eng.pdn.ac.lk>
+Date:   Sun Oct 5 17:42:06 2025 +0530
+
+    Bod pic
+
+[33mcommit a1198ba9e0c3605be492a62a9188c29e73caf63e[m
+Author: Thisen2002 <e21231@eng.pdn.ac.lk>
+Date:   Sun Oct 5 15:26:17 2025 +0530
+
+    pictures
+
+[33mcommit e4857a9f2144738600c3e510f13ae4c7643b89ad[m
+Author: Thisen2002 <e21231@eng.pdn.ac.lk>
+Date:   Sun Oct 5 15:25:01 2025 +0530
+
+    team
+
+[33mcommit 1e87ee918471291c795f1febb54581a8e22cb757[m
+Author: Thisen2002 <e21231@eng.pdn.ac.lk>
+Date:   Sun Oct 5 14:56:05 2025 +0530
+
+    hero section fix
+
+[33mcommit 415de1b982d0d802873599681b288b2906f2d051[m
+Author: Thisen2002 <e21231@eng.pdn.ac.lk>
+Date:   Sat Oct 4 00:19:27 2025 +0530
+
+    few changres
+
+[33mcommit 593d09df0251b00440f97309ec8ceb03c88b6f83[m
+Author: Thisen2002 <e21231@eng.pdn.ac.lk>
+Date:   Fri Oct 3 23:48:41 2025 +0530
+
+    contact page miner changes
+
+[33mcommit d1761fc92faeff9aaa85cd7072d314228115de60[m
+Author: Thisen2002 <e21231@eng.pdn.ac.lk>
+Date:   Thu Oct 2 18:49:35 2025 +0530
+
+    galllery pages change
+
+[33mcommit a4b8bd0ddfc2e06d466a2b3f669da8f47698e234[m
+Author: Thisen2002 <e21231@eng.pdn.ac.lk>
+Date:   Thu Oct 2 18:41:46 2025 +0530
+
+    changing
+
+[33mcommit e5118df23c0f711675d29dd212965f8f4aaee93e[m
+Author: Thisen2002 <e21231@eng.pdn.ac.lk>
+Date:   Thu Oct 2 18:20:58 2025 +0530
+
+    developing
+
+[33mcommit 2609f09d34f1b2558647bb3c0f2d20b862e02305[m
+Author: Thisen2002 <e21231@eng.pdn.ac.lk>
+Date:   Fri Sep 5 20:53:42 2025 +0530
+
+    same thing
+
+[33mcommit 8769c88a008d6964c38d1ee01d1d50f0ffae0fe7[m
+Author: Thisen2002 <e21231@eng.pdn.ac.lk>
+Date:   Fri Sep 5 20:51:34 2025 +0530
+
+    deploy error correct
+
+[33mcommit 85129eae9a0b207fe5161ffcbd4d1682ffd51030[m
+Author: Thisen2002 <e21231@eng.pdn.ac.lk>
+Date:   Fri Sep 5 20:23:25 2025 +0530
+
+    navbar update
+
+[33mcommit 3dff53e47cec67191d5149e6d5764e156c537c3f[m
+Author: Thisen2002 <e21231@eng.pdn.ac.lk>
+Date:   Wed Sep 3 07:54:54 2025 +0530
+
+    Initial comment
