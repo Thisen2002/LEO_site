@@ -38,8 +38,9 @@
 }
 
 .nav-title {
-  font-size: 1.3rem;
-  font-weight: 700;
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-normal);
   color: #1e3c72;
 }
 
@@ -52,7 +53,9 @@
 .nav-link {
   color: #333;
   text-decoration: none;
-  font-weight: 500;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-normal);
   transition: color 0.3s ease;
   position: relative;
 }
@@ -78,7 +81,7 @@
 
 .nav-link.active {
   color: #1e3c72;
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
 }
 
 .nav-link.active::after {
@@ -97,14 +100,15 @@
   border: none;
   color: #333;
   text-decoration: none;
-  font-weight: 500;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-normal);
   transition: color 0.3s ease;
   position: relative;
   cursor: pointer;
   display: flex;
   align-items: center;
   gap: 5px;
-  font-size: inherit;
   font-family: inherit;
 }
 
@@ -129,7 +133,7 @@
 
 .dropdown-toggle.active {
   color: #1e3c72;
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
 }
 
 .dropdown-toggle.active::after {
@@ -138,7 +142,7 @@
 }
 
 .dropdown-arrow {
-  font-size: 0.8rem;
+  font-size: var(--font-size-xs);
   transition: transform 0.3s ease;
 }
 
@@ -172,9 +176,11 @@
   display: block;
   color: #333;
   text-decoration: none;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-normal);
   padding: 12px 20px;
   transition: all 0.3s ease;
-  font-weight: 500;
 }
 
 .dropdown-item:hover {
@@ -189,7 +195,9 @@
   border: none;
   padding: 10px 25px;
   border-radius: 25px;
-  font-weight: 600;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-normal);
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -319,7 +327,7 @@
 
 @media screen and (max-width: 480px) {
   .nav-title {
-    font-size: 1.1rem;
+    font-size: var(--font-size-lg);
   }
   
   .nav-logo {

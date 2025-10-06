@@ -5,9 +5,7 @@
 }
 
 .homepage {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   color: #333;
-  line-height: 1.6;
 }
 
 .container {
@@ -68,21 +66,25 @@
 }
 
 .hero-content h1 {
-  font-size: 3.5rem;
+  font-size: var(--font-size-6xl);
   margin-bottom: 10px;
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
   text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
 }
 
 .hero-content h2 {
-  font-size: 1.8rem;
-  font-weight: 300;
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-light);
+  line-height: var(--line-height-normal);
   margin-bottom: 20px;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
 }
 
 .tagline {
-  font-size: 1.2rem;
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-normal);
   margin-bottom: 30px;
   font-style: italic;
   text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
@@ -93,8 +95,9 @@
   color: #1e3c72;
   border: none;
   padding: 15px 40px;
-  font-size: 1.1rem;
-  font-weight: 600;
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-normal);
   border-radius: 50px;
   cursor: pointer;
   transition: transform 0.3s ease;
@@ -112,14 +115,18 @@
 }
 
 .about-section h2 {
-  font-size: 2.5rem;
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
   text-align: center;
   margin-bottom: 30px;
   color: #1e3c72;
 }
 
 .about-section p {
-  font-size: 1.2rem;
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-relaxed);
   text-align: center;
   max-width: 800px;
   margin: 0 auto;
@@ -147,7 +154,9 @@
 
 .mission h3, .vision h3 {
   color: #1e3c72;
-  font-size: 1.8rem;
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-snug);
   margin-bottom: 20px;
 }
 
@@ -159,7 +168,9 @@
 
 .activities-section h2 {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
   margin-bottom: 50px;
   color: #1e3c72;
 }
@@ -184,12 +195,15 @@
 }
 
 .activity-card .icon {
-  font-size: 3rem;
+  font-size: var(--font-size-5xl);
   margin-bottom: 20px;
 }
 
 .activity-card h3 {
   color: #1e3c72;
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-snug);
   margin-bottom: 15px;
 }
 
@@ -208,13 +222,17 @@
 }
 
 .stat h3 {
-  font-size: 3rem;
+  font-size: var(--font-size-5xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
   color: #ffd700;
   margin-bottom: 10px;
 }
 
 .stat p {
-  font-size: 1.2rem;
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-normal);
 }
 
 /* CTA Section */
@@ -225,7 +243,9 @@
 }
 
 .cta-section h2 {
-  font-size: 2.5rem;
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
   color: #1e3c72;
   margin-bottom: 20px;
 }
@@ -239,7 +259,9 @@
 
 .primary-button, .secondary-button {
   padding: 15px 40px;
-  font-size: 1.1rem;
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-normal);
   border-radius: 50px;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -269,11 +291,11 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .hero-content h1 {
-    font-size: 2.5rem;
+    font-size: var(--font-size-5xl);
   }
   
   .hero-content h2 {
-    font-size: 1.4rem;
+    font-size: var(--font-size-xl);
   }
   
   .mv-grid {
