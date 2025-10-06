@@ -45,7 +45,7 @@ function About() {
             <div className={`story-text ${getAnimationClass('slideInLeft', storyVisible)}`}>
               <h2 className={getAnimationClass('fadeInUp', storyVisible)}>Our Story</h2>
               <p className={`${getAnimationClass('fadeInUp', storyVisible)} animate-delay-200`}>
-                We are part of the global Leo movement—young people creating meaningful change through
+                We are part of the global Leo movement young people creating meaningful change through
                 volunteerism and leadership development. At Peradeniya, our projects span education,
                 environment, health, and community development, giving members hands-on experience to lead,
                 collaborate, and serve.
