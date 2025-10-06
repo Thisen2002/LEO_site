@@ -5,9 +5,17 @@
     "category": "team",
     "image": "/Pic/Gallery/24_25 bod transition.jpg",
     "description": "Celebrating the transition of leadership for the 2024-25 academic year."
+    "title": "Board of Directors Transition 24-25",
+    "category": "team",
+    "image": "/Pic/Gallery/24_25 bod transition.jpg",
+    "description": "Celebrating the transition of leadership for the 2024-25 academic year."
   },
   {
     "id": 2,
+    "title": "Annual Ceremony",
+    "category": "events",
+    "image": "/Pic/Gallery/Annual_ceramini.jpg",
+    "description": "Our annual ceremony celebrating achievements and milestones."
     "title": "Annual Ceremony",
     "category": "events",
     "image": "/Pic/Gallery/Annual_ceramini.jpg",
@@ -19,6 +27,10 @@
     "category": "events",
     "image": "/Pic/Gallery/Award_ceramany_1.jpg",
     "description": "Recognizing outstanding contributions and achievements of our members."
+    "title": "Award Ceremony",
+    "category": "events",
+    "image": "/Pic/Gallery/Award_ceramany_1.jpg",
+    "description": "Recognizing outstanding contributions and achievements of our members."
   },
   {
     "id": 4,
@@ -26,9 +38,17 @@
     "category": "events",
     "image": "/Pic/Gallery/Award_ceramany_2.jpg",
     "description": "More memorable moments from our award ceremony celebration."
+    "title": "Award Ceremony Highlights",
+    "category": "events",
+    "image": "/Pic/Gallery/Award_ceramany_2.jpg",
+    "description": "More memorable moments from our award ceremony celebration."
   },
   {
     "id": 5,
+    "title": "Board of Directors 2025",
+    "category": "team",
+    "image": "/Pic/Gallery/BoD_2025.jpg",
+    "description": "Meet our dedicated Board of Directors for the year 2025."
     "title": "Board of Directors 2025",
     "category": "team",
     "image": "/Pic/Gallery/BoD_2025.jpg",
