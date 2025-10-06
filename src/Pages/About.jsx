@@ -123,32 +123,32 @@ function About() {
             <h2>Why Join Leo Society UOP?</h2>
             <div className="benefits-grid">
               <div className="benefit-card">
-                <div className="benefit-icon">🎯</div>
+                {/* <div className="benefit-icon">🎯</div> */}
                 <h3>Skill Development</h3>
                 <p>Develop leadership, communication, project management, and teamwork skills through real-world service projects.</p>
               </div>
               <div className="benefit-card">
-                <div className="benefit-icon">🤝</div>
+                {/* <div className="benefit-icon">🤝</div> */}
                 <h3>Networking</h3>
                 <p>Connect with like-minded students, alumni, and professionals who share your passion for service and leadership.</p>
               </div>
               <div className="benefit-card">
-                <div className="benefit-icon">🌱</div>
+                {/* <div className="benefit-icon">🌱</div> */}
                 <h3>Personal Growth</h3>
                 <p>Challenge yourself, step out of your comfort zone, and discover your potential while making a positive impact.</p>
               </div>
               <div className="benefit-card">
-                <div className="benefit-icon">🏆</div>
+                {/* <div className="benefit-icon">🏆</div> */}
                 <h3>Recognition</h3>
                 <p>Gain recognition for your service through awards, certificates, and leadership positions within the organization.</p>
               </div>
               <div className="benefit-card">
-                <div className="benefit-icon">🌍</div>
+                {/* <div className="benefit-icon">🌍</div> */}
                 <h3>Global Perspective</h3>
                 <p>Participate in international service projects and connect with Leo clubs around the world.</p>
               </div>
               <div className="benefit-card">
-                <div className="benefit-icon">📚</div>
+                {/* <div className="benefit-icon">📚</div> */}
                 <h3>Academic Balance</h3>
                 <p>Learn to balance academics with meaningful extracurricular activities that enhance your university experience.</p>
               </div>

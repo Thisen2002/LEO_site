@@ -38,7 +38,7 @@ function Homepage() {
           <h1>Leo Society</h1>
           <h2>University of Peradeniya</h2>
           <p className="tagline">We Serve with Pride</p>
-          <button className="cta-button">Join Our Mission</button>
+          <button className="cta-button" onClick={() => window.open('https://forms.gle/VZokFgZajSyLVbyd8', '_blank')}>Join Our Mission</button>
         </div>
       </section>
 
